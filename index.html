@@ -5,8 +5,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="./assets/img/shortcut.svg">
 		<title>Nomi</title>
-		<script type="module" crossorigin="" src="./js/index.min.js?v=1765799301443"></script>
-		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1765799301443">
+		<script type="module" crossorigin="" src="./js/index.min.js?v=1765816535365"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1765816535365">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -21,11 +21,11 @@
 							</div>
 							<div class="menu__list">
 								<button type="button" class="menu__button">Настройки ресторана</button>
-								<button type="button" class="menu__button">Настройки</button>
-								<button type="button" class="menu__button">Мои заказы</button>
-								<button type="button" class="menu__button">Избранное</button>
-								<button type="button" class="menu__button">Мои адреса</button>
-								<button type="button" class="menu__button">Сотрудничество</button>
+								<button type="button" class="menu__button" data-open-panel="settings">Настройки</button>
+								<button type="button" class="menu__button" data-open-panel="orders">Мои заказы</button>
+								<button type="button" class="menu__button" data-open-panel="chosen">Избранное</button>
+								<button type="button" class="menu__button" data-open-panel="address">Мои адреса</button>
+								<button type="button" class="menu__button" data-open-panel="team">Сотрудничество</button>
 							</div>
 						</nav>
 					</div>
@@ -37,6 +37,52 @@
 						</button>
 						<button type="button" class="header__button header__button--chat header__button--icon-chat"></button>
 					</div>
+				</div>
+				<div data-fls-panels="" class="panels">
+					<section class="panel" data-panel="settings">
+						<header class="panel__head">
+							<button type="button" data-fls-button="" class="panel__close panel__close--icon-arrow button-box" data-panel-close=""></button>
+							<h2 class="panel__title">Настройки</h2>
+						</header>
+						<button data-open-panel="payment">Способ оплаты</button>
+					</section>
+					<section class="panel" data-panel="payment">
+						<header class="panel__head">
+							<button type="button" data-fls-button="" class="panel__close panel__close--icon-arrow button-box" data-panel-close=""></button>
+							<h2 class="panel__title">Способ оплаты</h2>
+						</header>
+						<button data-open-panel="add-card">Добавить карту</button>
+					</section>
+					<section class="panel" data-panel="add-card">
+						<header class="panel__head">
+							<button type="button" data-fls-button="" class="panel__close panel__close--icon-arrow button-box" data-panel-close=""></button>
+							<h2 class="panel__title">Добавить карту</h2>
+						</header>
+					</section>
+					<section class="panel" data-panel="orders">
+						<header class="panel__head">
+							<button type="button" data-fls-button="" class="panel__close panel__close--icon-arrow button-box" data-panel-close=""></button>
+							<h2 class="panel__title">Мои заказы</h2>
+						</header>
+					</section>
+					<section class="panel" data-panel="chosen">
+						<header class="panel__head">
+							<button type="button" data-fls-button="" class="panel__close panel__close--icon-arrow button-box" data-panel-close=""></button>
+							<h2 class="panel__title">Избранное</h2>
+						</header>
+					</section>
+					<section class="panel" data-panel="address">
+						<header class="panel__head">
+							<button type="button" data-fls-button="" class="panel__close panel__close--icon-arrow button-box" data-panel-close=""></button>
+							<h2 class="panel__title">Мои адреса</h2>
+						</header>
+					</section>
+					<section class="panel" data-panel="team">
+						<header class="panel__head">
+							<button type="button" data-fls-button="" class="panel__close panel__close--icon-arrow button-box" data-panel-close=""></button>
+							<h2 class="panel__title">Сотрудничество</h2>
+						</header>
+					</section>
 				</div>
 			</header>
 			<main class="page page--home">

@@ -272,6 +272,31 @@ function tabs() {
   }
 }
 window.addEventListener("load", tabs);
+function panelsInit() {
+  const panels = document.querySelectorAll("[data-panel]");
+  if (!panels.length) return;
+  const stack = [];
+  const openPanel = (id) => {
+    const panel = document.querySelector(`[data-panel="${id}"]`);
+    if (!panel) return;
+    panel.classList.add("is-active");
+    stack.push(panel);
+  };
+  const closePanel = () => {
+    const panel = stack.pop();
+    panel?.classList.remove("is-active");
+  };
+  document.addEventListener("click", (e) => {
+    const openBtn = e.target.closest("[data-open-panel]");
+    const closeBtn = e.target.closest("[data-panel-close]");
+    if (openBtn) {
+      openPanel(openBtn.dataset.openPanel);
+    }
+    if (closeBtn) {
+      closePanel();
+    }
+  });
+}
 function menuInit() {
   document.addEventListener("click", function(e) {
     if (bodyLockStatus && e.target.closest("[data-fls-menu]")) {
@@ -280,7 +305,10 @@ function menuInit() {
     }
   });
 }
-document.querySelector("[data-fls-menu]") ? window.addEventListener("load", menuInit) : null;
+window.addEventListener("load", () => {
+  menuInit();
+  panelsInit();
+});
 function headerScroll() {
   const header = document.querySelector("[data-fls-header-scroll]");
   const headerShow = header.hasAttribute("data-fls-header-scroll-show");
