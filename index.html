@@ -5,37 +5,30 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="./assets/img/shortcut.svg">
 		<title>Nomi</title>
-		<script type="module" crossorigin="" src="./js/index.min.js?v=1765792110404"></script>
-		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1765792110404">
+		<script type="module" crossorigin="" src="./js/index.min.js?v=1765799090067"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1765799090067">
 	</head>
 	<body>
 		<div class="wrapper">
 			<header data-fls-header="" data-fls-header-scroll="" class="header">
 				<div class="header__container">
 					<div class="header__menu menu">
+						<div data-fls-menu="" class="menu__overlay"></div>
 						<nav class="menu__body">
-							<ul class="menu__list">
-								<li class="menu__item">
-									<a href="#" class="menu__link menu__link--active">Home</a>
-								</li>
-								<li class="menu__item">
-									<a href="#" class="menu__link">About</a>
-								</li>
-								<li class="menu__item">
-									<a href="#" class="menu__link">Blog</a>
-								</li>
-								<li class="menu__item">
-									<a href="#" class="menu__link">Contacts</a>
-								</li>
-							</ul>
+							<div class="menu__head">
+								<div class="menu__logo menu__logo--icon-logo">Nomi</div>
+								<button type="button" data-fls-button="" data-fls-menu="" class="menu__close menu__close--icon-cancel button-box button-box--trans"></button>
+							</div>
+							<div class="menu__list">
+								<button type="button" class="menu__button">Настройки ресторана</button>
+								<button type="button" class="menu__button">Настройки</button>
+								<button type="button" class="menu__button">Мои заказы</button>
+								<button type="button" class="menu__button">Избранное</button>
+								<button type="button" class="menu__button">Мои адреса</button>
+								<button type="button" class="menu__button">Сотрудничество</button>
+							</div>
 						</nav>
 					</div>
-					<!--
-<fetch url="@components/layout/menu/menu.json">
-<each loop='item in response'>
-</each>
-</fetch>
--->
 					<div class="header__body">
 						<button type="button" data-fls-menu="" class="header__button">
 							<div class="icon-menu">
@@ -500,14 +493,11 @@
 				</section>
 				<div data-fls-blank="" class="blank">
 					<div class="blank__container">
-						<div class="blank__decore">
-							<img src="./assets/img/decore/aster.svg" alt="Decore">
-						</div>
 						<div class="blank__main">
 							<div class="blank__label">В корзину</div>
 							<div class="blank__total">0 000 ₽</div>
 						</div>
-						<a href="#" class="blank__button blank__button--icon-arrow"></a>
+						<a href="#" data-fls-button="" class="blank__button blank__button--icon-arrow button-box button-box--lite"></a>
 					</div>
 				</div>
 			</main>
