@@ -1040,6 +1040,18 @@ function headerScroll() {
   });
 }
 document.querySelector("[data-fls-header-scroll]") ? window.addEventListener("load", headerScroll) : null;
+function chatInit() {
+  document.addEventListener("click", function(e) {
+    if (bodyLockStatus && e.target.closest("[data-fls-chat]")) {
+      bodyLockToggle();
+      document.documentElement.toggleAttribute("data-fls-chat-open");
+    }
+  });
+}
+window.addEventListener("load", () => {
+  chatInit();
+  panelsInit();
+});
 var inputmask_min$1 = { exports: {} };
 var inputmask_min = inputmask_min$1.exports;
 var hasRequiredInputmask_min;
