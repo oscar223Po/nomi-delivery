@@ -5,8 +5,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="./assets/img/shortcut.svg">
 		<title>Nomi</title>
-		<script type="module" crossorigin="" src="./js/index.min.js?v=1765816535365"></script>
-		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1765816535365">
+		<script type="module" crossorigin="" src="./js/index.min.js?v=1765867407868"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1765867407868">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -40,48 +40,93 @@
 				</div>
 				<div data-fls-panels="" class="panels">
 					<section class="panel" data-panel="settings">
-						<header class="panel__head">
-							<button type="button" data-fls-button="" class="panel__close panel__close--icon-arrow button-box" data-panel-close=""></button>
-							<h2 class="panel__title">Настройки</h2>
-						</header>
-						<button data-open-panel="payment">Способ оплаты</button>
+						<div class="panel__wrapper">
+							<div class="panel__head">
+								<button type="button" data-fls-button="" class="panel__close panel__close--icon-arrow button-box" data-panel-close=""></button>
+								<h2 class="panel__title">Настройки</h2>
+							</div>
+							<form action="#" class="panel__settings settings">
+								<div class="settings__label">
+									<span class="settings__span settings__span--label">Имя</span>
+									<input data-fls-input="" autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Имя пользователя" class="settings__input input">
+								</div>
+								<div class="settings__label">
+									<span class="settings__span settings__span--label">Дата рождения</span>
+									<input data-fls-input="" data-fls-input-mask="99.99.9999" autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="00.00.0000" class="settings__input input">
+								</div>
+								<div class="settings__label">
+									<span class="settings__span settings__span--label">Пол</span>
+									<select name="form[]" data-fls-select="" data-fls-select-modif="form">
+										<option value="1" selected>Мужской</option>
+										<option value="2">Женский</option>
+									</select>
+								</div>
+								<div class="settings__label">
+									<span class="settings__span settings__span--label">Телефон при регистрации</span>
+									<input data-fls-input="" data-fls-input-mask="+7-999-999-99-99" autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="+7-000-000-00-00" class="settings__input input">
+								</div>
+								<div class="settings__label">
+									<span class="settings__span settings__span--label">Телефон для связи</span>
+									<input data-fls-input="" data-fls-input-mask="+7-999-999-99-99" autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="+7-000-000-00-00" class="settings__input input">
+								</div>
+							</form>
+						</div>
+						<button type="button" class="panel__button panel__button--payment panel__button--icon-arrow panel__button--label" data-open-panel="payment">Способ оплаты</button>
 					</section>
 					<section class="panel" data-panel="payment">
-						<header class="panel__head">
-							<button type="button" data-fls-button="" class="panel__close panel__close--icon-arrow button-box" data-panel-close=""></button>
-							<h2 class="panel__title">Способ оплаты</h2>
-						</header>
-						<button data-open-panel="add-card">Добавить карту</button>
+						<div class="panel__wrapper">
+							<div class="panel__head">
+								<button type="button" data-fls-button="" class="panel__close panel__close--icon-arrow button-box" data-panel-close=""></button>
+								<h2 class="panel__title">Способ оплаты</h2>
+							</div>
+							<div class="panel__payment payment">
+								<div class="payment__item item-payment item-payment--active">
+									<div class="item-payment__main">
+										<span>Т-Банк</span>
+										<div class="item-payment__label">MIR ** 0000</div>
+									</div>
+									<button type="button" class="item-payment__delete item-payment__delete--icon-trash"></button>
+								</div>
+								<div class="payment__item item-payment">
+									<div class="item-payment__main">
+										<span>Сбер</span>
+										<div class="item-payment__label">MIR ** 1111</div>
+									</div>
+									<button type="button" class="item-payment__delete item-payment__delete--icon-trash"></button>
+								</div>
+							</div>
+						</div>
+						<button type="button" class="button" data-fls-button="" data-open-panel="add-card">Добавить карту</button>
 					</section>
 					<section class="panel" data-panel="add-card">
-						<header class="panel__head">
+						<div class="panel__head">
 							<button type="button" data-fls-button="" class="panel__close panel__close--icon-arrow button-box" data-panel-close=""></button>
 							<h2 class="panel__title">Добавить карту</h2>
-						</header>
+						</div>
 					</section>
 					<section class="panel" data-panel="orders">
-						<header class="panel__head">
+						<div class="panel__head">
 							<button type="button" data-fls-button="" class="panel__close panel__close--icon-arrow button-box" data-panel-close=""></button>
 							<h2 class="panel__title">Мои заказы</h2>
-						</header>
+						</div>
 					</section>
 					<section class="panel" data-panel="chosen">
-						<header class="panel__head">
+						<div class="panel__head">
 							<button type="button" data-fls-button="" class="panel__close panel__close--icon-arrow button-box" data-panel-close=""></button>
 							<h2 class="panel__title">Избранное</h2>
-						</header>
+						</div>
 					</section>
 					<section class="panel" data-panel="address">
-						<header class="panel__head">
+						<div class="panel__head">
 							<button type="button" data-fls-button="" class="panel__close panel__close--icon-arrow button-box" data-panel-close=""></button>
 							<h2 class="panel__title">Мои адреса</h2>
-						</header>
+						</div>
 					</section>
 					<section class="panel" data-panel="team">
-						<header class="panel__head">
+						<div class="panel__head">
 							<button type="button" data-fls-button="" class="panel__close panel__close--icon-arrow button-box" data-panel-close=""></button>
 							<h2 class="panel__title">Сотрудничество</h2>
-						</header>
+						</div>
 					</section>
 				</div>
 			</header>
