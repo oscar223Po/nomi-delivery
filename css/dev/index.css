@@ -709,6 +709,9 @@ body {
   align-items: start;
   grid-template-rows: 1fr auto;
 }
+.shape.shape-settings {
+  gap: 0;
+}
 .shape__span {
   display: inline-flex;
 }

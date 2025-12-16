@@ -5,8 +5,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="./assets/img/shortcut.svg">
 		<title>Nomi</title>
-		<script type="module" crossorigin="" src="./js/index.min.js?v=1765889787840"></script>
-		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1765889787840">
+		<script type="module" crossorigin="" src="./js/index.min.js?v=1765891417336"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1765891417336">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -40,14 +40,14 @@
 						<button type="button" class="header__button header__button--chat header__button--icon-chat"></button>
 					</div>
 				</div>
-				<form data-fls-panels="" class="panels">
+				<div data-fls-panels="" class="panels">
 					<section class="panel" data-panel="settings">
 						<div class="panel__wrapper">
 							<div class="panel__head">
 								<button type="button" data-fls-button="" class="panel__close panel__close--icon-arrow button-box" data-panel-close=""></button>
 								<h2 class="panel__title panel__title--title">Настройки</h2>
 							</div>
-							<form action="#" data-fls-form="" class="panel__shape shape">
+							<form action="#" data-fls-form="" class="panel__shape shape shape-settings">
 								<div class="shape__body">
 									<div class="shape__label">
 										<span class="shape__span shape__span--label">Имя</span>
@@ -424,25 +424,25 @@
 						<div class="panel__address address">
 							<button type="button" class="address__add address__add--icon-plus" data-open-panel="address-new">Добавить адрес</button>
 							<div class="address__history">
-								<button type="button" class="address__button address__button--icon-location">
+								<button type="button" class="address__button address__button--icon-location" data-open-panel="address-edit">
 									<div class="address__inner">
 										<div class="address__label">Название ресторана</div>
 										<div class="address__location">ул. Пушкина, д. 00</div>
 									</div>
 								</button>
-								<button type="button" class="address__button address__button--icon-location">
+								<button type="button" class="address__button address__button--icon-location" data-open-panel="address-edit">
 									<div class="address__inner">
 										<div class="address__label">Название ресторана</div>
 										<div class="address__location">ул. Пушкина, д. 00</div>
 									</div>
 								</button>
-								<button type="button" class="address__button address__button--icon-location">
+								<button type="button" class="address__button address__button--icon-location" data-open-panel="address-edit">
 									<div class="address__inner">
 										<div class="address__label">Название ресторана</div>
 										<div class="address__location">ул. Пушкина, д. 00</div>
 									</div>
 								</button>
-								<button type="button" class="address__button address__button--icon-location">
+								<button type="button" class="address__button address__button--icon-location" data-open-panel="address-edit">
 									<div class="address__inner">
 										<div class="address__label">Название ресторана</div>
 										<div class="address__location">ул. Пушкина, д. 00</div>
@@ -489,7 +489,48 @@
 									<input data-fls-input="" required autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Комментарий для курьера" class="input">
 								</div>
 							</div>
-							<button type="submit" class="button" data-fls-button="">Сохранить</button>
+							<button type="submit" data-fls-button="" class="button">Сохранить</button>
+						</form>
+					</section>
+					<section class="panel panel-gnf" data-panel="address-edit">
+						<div class="panel__head">
+							<button type="button" data-fls-button="" class="panel__close panel__close--icon-arrow button-box" data-panel-close=""></button>
+							<h2 class="panel__title panel__title--title">Новый адрес</h2>
+						</div>
+						<form action="#" data-fls-form="" class="panel__shape shape">
+							<div class="shape__body">
+								<div class="shape__label">
+									<span class="shape__span shape__span--label">Название</span>
+									<input data-fls-input="" required autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Введите название" value="Название адреса 1" class="input">
+								</div>
+								<div class="shape__label">
+									<span class="shape__span shape__span--label">Улица</span>
+									<input data-fls-input="" required autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Введите название улицы" value="Пушкина" class="input">
+								</div>
+								<div class="shape__labels">
+									<div class="shape__label">
+										<span class="shape__span shape__span--label">Подъезд</span>
+										<input data-fls-input="" required autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Номер подъезда" value="00" class="input">
+									</div>
+									<div class="shape__label">
+										<span class="shape__span shape__span--label">Домофон</span>
+										<input data-fls-input="" required autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Домофон" value="00" class="input">
+									</div>
+									<div class="shape__label">
+										<span class="shape__span shape__span--label">Квартира</span>
+										<input data-fls-input="" required autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Номер квартиры" value="00" class="input">
+									</div>
+									<div class="shape__label">
+										<span class="shape__span shape__span--label">Этаж</span>
+										<input data-fls-input="" required autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Этаж" value="00" class="input">
+									</div>
+								</div>
+								<div class="shape__label">
+									<span class="shape__span shape__span--label">Комментарий</span>
+									<input data-fls-input="" required autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Комментарий для курьера" value="Комментарий для курьера" class="input">
+								</div>
+							</div>
+							<button type="button" data-fls-button="" class="button">Сохранить</button>
 						</form>
 					</section>
 					<section class="panel" data-panel="team">
@@ -498,7 +539,7 @@
 							<h2 class="panel__title panel__title--title">Сотрудничество</h2>
 						</div>
 					</section>
-				</form>
+				</div>
 			</header>
 			<main class="page page--home">
 				<div data-fls-preview="" class="preview">
