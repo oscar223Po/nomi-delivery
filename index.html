@@ -5,8 +5,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="./assets/img/shortcut.svg">
 		<title>Nomi</title>
-		<script type="module" crossorigin="" src="./js/index.min.js?v=1765969694169"></script>
-		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1765969694169">
+		<script type="module" crossorigin="" src="./js/index.min.js?v=1765994368060"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1765994368060">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -1134,7 +1134,7 @@
 					</div>
 				</section>
 				<div data-fls-controls="" class="controls">
-					<section class="control control-gnf" data-control="book">
+					<section class="control control-lock control-gnf" data-control="book">
 						<div class="control__head">
 							<button type="button" data-fls-button="" data-fls-book="" class="control__close control__close--icon-arrow button-box"></button>
 							<h2 class="control__title control__title--title">Бронирование</h2>
@@ -1146,7 +1146,7 @@
 									<span>Адрес заведения</span>
 								</div>
 								<div class="book__actions">
-									<button type="button" class="book__action book__action--icon-calendar">
+									<button type="button" data-fls-calendar="" class="book__action book__action--icon-calendar">
 										<span>20.10</span>
 									</button>
 									<button type="button" class="book__action book__action--icon-time">
@@ -1168,6 +1168,21 @@
 									<div class="book__label">
 										<span>Пожелания к брони</span>
 										<textarea data-fls-input="" autocomplete="off" name="form[]" data-error="Error" class="input"></textarea>
+									</div>
+								</div>
+								<div data-fls-stamps="" class="stamps">
+									<div class="stamp">
+										<div data-fls-calendar="" class="stamp__overlay" data-control="calendar"></div>
+										<div class="stamp__wrapper" data-control="calendar">
+											<div class="stamp__decore">
+												<img src="./assets/img/decore/plashka.svg" alt="Decore">
+											</div>
+											<div class="stamp__body">
+												Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum dolor dolorem odit veritatis, ad doloribus
+				ab
+				nihil, unde possimus ipsa facere officia, omnis repudiandae. Quidem, quod quae! Enim, delectus labore.
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -1254,20 +1269,22 @@
 						<div class="info__decore">
 							<img src="./assets/img/decore/plashka.svg" alt="Decore">
 						</div>
-						<div class="info__head">
-							<h3 class="info__label info__label--label">Название заведения</h3>
-							<span>Режим работы: с 10:00 до 21:00</span>
-						</div>
-						<div class="info__categ">
-							<span>Категория 1</span>
-							<span>Категория 2</span>
-							<span>Категория 3</span>
-						</div>
-						<div class="info__about">
-							<span>Исполнитель (продавец): ИП Иванов Иван Ивановчи</span>
-							<span>Юр. Адрес: Россия, г. Москва, ул. Пушкина, д. 153</span>
-							<span>ИНН: 753600033397</span>
-							<span>Рег. номер: 304753409300310</span>
+						<div class="info__inner">
+							<div class="info__head">
+								<h3 class="info__label info__label--label">Название заведения</h3>
+								<span>Режим работы: с 10:00 до 21:00</span>
+							</div>
+							<div class="info__categ">
+								<span>Категория 1</span>
+								<span>Категория 2</span>
+								<span>Категория 3</span>
+							</div>
+							<div class="info__about">
+								<span>Исполнитель (продавец): ИП Иванов Иван Ивановчи</span>
+								<span>Юр. Адрес: Россия, г. Москва, ул. Пушкина, д. 153</span>
+								<span>ИНН: 753600033397</span>
+								<span>Рег. номер: 304753409300310</span>
+							</div>
 						</div>
 					</div>
 				</div>

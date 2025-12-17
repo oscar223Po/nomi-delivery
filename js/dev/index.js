@@ -852,6 +852,31 @@ class SelectConstructor {
   }
 }
 document.querySelector("select[data-fls-select]") ? window.addEventListener("load", () => window.flsSelect = new SelectConstructor({})) : null;
+const STAMP_TYPES = ["calendar", "time", "count"];
+const lockEl = document.querySelector(".control-lock");
+function updateControlLock() {
+  const isAnyOpen = STAMP_TYPES.some(
+    (type) => document.documentElement.hasAttribute(`data-fls-${type}-open`)
+  );
+  lockEl?.classList.toggle("control-lock--active", isAnyOpen);
+}
+function initStamp(type) {
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(`[data-fls-${type}]`)) return;
+    STAMP_TYPES.forEach((t) => {
+      if (t !== type) {
+        document.documentElement.removeAttribute(`data-fls-${t}-open`);
+      }
+    });
+    document.documentElement.toggleAttribute(`data-fls-${type}-open`);
+    updateControlLock();
+  });
+}
+window.addEventListener("load", () => {
+  initStamp("calendar");
+  initStamp("time");
+  initStamp("count");
+});
 function spollers() {
   const spollersArray = document.querySelectorAll("[data-fls-spollers]");
   if (spollersArray.length > 0) {
