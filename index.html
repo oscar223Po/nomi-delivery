@@ -5,8 +5,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="./assets/img/shortcut.svg">
 		<title>Nomi</title>
-		<script type="module" crossorigin="" src="./js/index.min.js?v=1765951626955"></script>
-		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1765951626955">
+		<script type="module" crossorigin="" src="./js/index.min.js?v=1765969694169"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1765969694169">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -700,10 +700,10 @@
 							</button>
 							<div class="leader-hero__actions">
 								<button type="button" class="leader-hero__action leader-hero__action--active">Самовывоз</button>
-								<button type="button" class="leader-hero__action">Доставка</button>
-								<button type="button" class="leader-hero__action">Бронь</button>
+								<button type="button" data-fls-delivery="" class="leader-hero__action">Доставка</button>
+								<button type="button" data-fls-book="" class="leader-hero__action">Бронь</button>
 							</div>
-							<button type="button" class="leader-hero__adres adres-leader adres-leader--icon-arrow">
+							<button type="button" data-fls-choose="" class="leader-hero__adres adres-leader adres-leader--icon-arrow">
 								<div class="adres-leader__content adres-leader--icon-location">
 									<div class="adres-leader__inner">
 										<div class="adres-leader__label">ул. Пушкина, д. 12</div>
@@ -1133,28 +1133,141 @@
 						</div>
 					</div>
 				</section>
+				<div data-fls-controls="" class="controls">
+					<section class="control control-gnf" data-control="book">
+						<div class="control__head">
+							<button type="button" data-fls-button="" data-fls-book="" class="control__close control__close--icon-arrow button-box"></button>
+							<h2 class="control__title control__title--title">Бронирование</h2>
+						</div>
+						<form action="#" class="control__book book">
+							<div class="book__main">
+								<div class="book__head">
+									<h3 class="book__title-head book__title-head--label">Название заведения</h3>
+									<span>Адрес заведения</span>
+								</div>
+								<div class="book__actions">
+									<button type="button" class="book__action book__action--icon-calendar">
+										<span>20.10</span>
+									</button>
+									<button type="button" class="book__action book__action--icon-time">
+										<span>12:30</span>
+									</button>
+									<button type="button" class="book__action book__action--icon-people">
+										<span>3</span>
+									</button>
+								</div>
+								<div class="book__inner">
+									<div class="book__label">
+										<span>Имя</span>
+										<input data-fls-input="" autocomplete="off" type="text" name="form[]" data-error="Error" class="input">
+									</div>
+									<div class="book__label">
+										<span>Телефон</span>
+										<input data-fls-input="" data-fls-input-mask="+7-999-999-99-99" autocomplete="off" type="text" name="form[]" data-error="Error" class="input">
+									</div>
+									<div class="book__label">
+										<span>Пожелания к брони</span>
+										<textarea data-fls-input="" autocomplete="off" name="form[]" data-error="Error" class="input"></textarea>
+									</div>
+								</div>
+							</div>
+							<button type="button" data-fls-button="" data-fls-book="" class="button">Забронировать</button>
+						</form>
+					</section>
+					<section class="control" data-control="choose">
+						<div class="control__wrapper">
+							<div class="control__head">
+								<button type="button" data-fls-button="" data-fls-choose="" class="control__close control__close--icon-arrow button-box"></button>
+								<h2 class="control__title control__title--title">Адрес заведения</h2>
+							</div>
+							<div class="control__choose choose">
+								<button type="button" class="choose__button choose__button--active choose__button--icon-location">
+									<div class="choose__inner">
+										<div class="choose__label">Название ресторана</div>
+										<div class="choose__location">ул. Пушкина, д. 00</div>
+									</div>
+								</button>
+								<button type="button" class="choose__button choose__button--icon-location">
+									<div class="choose__inner">
+										<div class="choose__label">Название ресторана</div>
+										<div class="choose__location">ул. Пушкина, д. 00</div>
+									</div>
+								</button>
+								<button type="button" class="choose__button choose__button--icon-location">
+									<div class="choose__inner">
+										<div class="choose__label">Название ресторана</div>
+										<div class="choose__location">ул. Пушкина, д. 00</div>
+									</div>
+								</button>
+								<button type="button" class="choose__button choose__button--icon-location">
+									<div class="choose__inner">
+										<div class="choose__label">Название ресторана</div>
+										<div class="choose__location">ул. Пушкина, д. 00</div>
+									</div>
+								</button>
+							</div>
+						</div>
+						<button type="button" data-fls-button="" data-fls-choose="" class="button">Выбрать</button>
+					</section>
+					<section class="control" data-control="delivery">
+						<div class="control__wrapper">
+							<div class="control__head">
+								<button type="button" data-fls-button="" data-fls-delivery="" class="control__close control__close--icon-arrow button-box"></button>
+								<h2 class="control__title control__title--title">Мои адреса</h2>
+							</div>
+							<div class="control__delivery delivery">
+								<button type="button" class="delivery__add delivery__add--icon-plus">Добавить адрес</button>
+								<div class="delivery__history">
+									<button type="button" class="delivery__button delivery__button--active delivery__button--icon-location">
+										<div class="delivery__inner">
+											<div class="delivery__label">Название ресторана</div>
+											<div class="delivery__location">ул. Пушкина, д. 00</div>
+										</div>
+									</button>
+									<button type="button" class="delivery__button delivery__button--icon-location">
+										<div class="delivery__inner">
+											<div class="delivery__label">Название ресторана</div>
+											<div class="delivery__location">ул. Пушкина, д. 00</div>
+										</div>
+									</button>
+									<button type="button" class="delivery__button delivery__button--icon-location">
+										<div class="delivery__inner">
+											<div class="delivery__label">Название ресторана</div>
+											<div class="delivery__location">ул. Пушкина, д. 00</div>
+										</div>
+									</button>
+									<button type="button" class="delivery__button delivery__button--icon-location">
+										<div class="delivery__inner">
+											<div class="delivery__label">Название ресторана</div>
+											<div class="delivery__location">ул. Пушкина, д. 00</div>
+										</div>
+									</button>
+								</div>
+							</div>
+						</div>
+						<button type="button" data-fls-button="" data-fls-delivery="" class="button">Выбрать</button>
+					</section>
+				</div>
 				<div class="info">
 					<div data-fls-info="" class="info__overlay"></div>
 					<div class="info__body">
 						<div class="info__decore">
 							<img src="./assets/img/decore/plashka.svg" alt="Decore">
 						</div>
-						<div class="info__wrapper">
-							<div class="info__head">
-								<h3 class="info__label info__label--label">Название заведения</h3>
-								<span>Режим работы: с 10:00 до 21:00</span>
-							</div>
-							<div class="info__categ">
-								<span>Категория 1</span>
-								<span>Категория 2</span>
-								<span>Категория 3</span>
-							</div>
-							<div class="info__about">
-								<span>Исполнитель (продавец): ИП Иванов Иван Ивановчи</span>
-								<span>Юр. Адрес: Россия, г. Москва, ул. Пушкина, д. 153</span>
-								<span>ИНН: 753600033397</span>
-								<span>Рег. номер: 304753409300310</span>
-							</div>
+						<div class="info__head">
+							<h3 class="info__label info__label--label">Название заведения</h3>
+							<span>Режим работы: с 10:00 до 21:00</span>
+						</div>
+						<div class="info__categ">
+							<span>Категория 1</span>
+							<span>Категория 2</span>
+							<span>Категория 3</span>
+						</div>
+						<div class="info__about">
+							<span>Исполнитель (продавец): ИП Иванов Иван Ивановчи</span>
+							<span>Юр. Адрес: Россия, г. Москва, ул. Пушкина, д. 153</span>
+							<span>ИНН: 753600033397</span>
+							<span>Рег. номер: 304753409300310</span>
 						</div>
 					</div>
 				</div>

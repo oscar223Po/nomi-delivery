@@ -1008,6 +1008,17 @@ window.addEventListener("load", () => {
   menuInit();
   panelsInit();
 });
+function infoInit() {
+  document.addEventListener("click", function(e) {
+    if (bodyLockStatus && e.target.closest("[data-fls-info]")) {
+      bodyLockToggle();
+      document.documentElement.toggleAttribute("data-fls-info-open");
+    }
+  });
+}
+window.addEventListener("load", () => {
+  infoInit();
+});
 function headerScroll() {
   const header = document.querySelector("[data-fls-header-scroll]");
   const headerShow = header.hasAttribute("data-fls-header-scroll-show");
@@ -3807,24 +3818,54 @@ function formInit() {
   formFieldsInit();
 }
 document.querySelector("[data-fls-form]") ? window.addEventListener("load", formInit) : null;
-function infoInit() {
-  document.addEventListener("click", function(e) {
-    if (bodyLockStatus && e.target.closest("[data-fls-info]")) {
-      bodyLockToggle();
-      document.documentElement.toggleAttribute("data-fls-info-open");
-    }
+const CONTROL_TYPES = ["book", "choose", "delivery"];
+function initControl(type) {
+  document.addEventListener("click", (e) => {
+    if (!bodyLockStatus) return;
+    if (!e.target.closest(`[data-fls-${type}]`)) return;
+    CONTROL_TYPES.forEach((t) => {
+      if (t !== type) {
+        document.documentElement.removeAttribute(`data-fls-${t}-open`);
+      }
+    });
+    bodyLockToggle();
+    document.documentElement.toggleAttribute(`data-fls-${type}-open`);
+  });
+}
+function initAddressToggle(rootSelector, buttonSelector, activeClass) {
+  const root = document.querySelector(rootSelector);
+  if (!root) return;
+  root.addEventListener("click", (e) => {
+    const button = e.target.closest(buttonSelector);
+    if (!button) return;
+    root.querySelector(`.${activeClass}`)?.classList.remove(activeClass);
+    button.classList.add(activeClass);
   });
 }
 window.addEventListener("load", () => {
-  infoInit();
+  initControl("book");
+  initControl("choose");
+  initControl("delivery");
+  initAddressToggle(
+    ".choose",
+    ".choose__button",
+    "choose__button--active"
+  );
+  initAddressToggle(
+    ".delivery",
+    ".delivery__button",
+    "delivery__button--active"
+  );
 });
 const actions = document.querySelector(".leader-hero__actions");
-actions.addEventListener("click", (e) => {
-  const button = e.target.closest(".leader-hero__action");
-  if (!button) return;
-  actions.querySelector(".leader-hero__action--active")?.classList.remove("leader-hero__action--active");
-  button.classList.add("leader-hero__action--active");
-});
+if (actions !== null) {
+  actions.addEventListener("click", (e) => {
+    const button = e.target.closest(".leader-hero__action");
+    if (!button) return;
+    actions.querySelector(".leader-hero__action--active")?.classList.remove("leader-hero__action--active");
+    button.classList.add("leader-hero__action--active");
+  });
+}
 document.addEventListener("click", (e) => {
   const portion = e.target.closest("[data-fls-portion]");
   if (!portion) return;
