@@ -1050,7 +1050,6 @@ function chatInit() {
 }
 window.addEventListener("load", () => {
   chatInit();
-  panelsInit();
 });
 var inputmask_min$1 = { exports: {} };
 var inputmask_min = inputmask_min$1.exports;
@@ -3808,6 +3807,17 @@ function formInit() {
   formFieldsInit();
 }
 document.querySelector("[data-fls-form]") ? window.addEventListener("load", formInit) : null;
+function infoInit() {
+  document.addEventListener("click", function(e) {
+    if (bodyLockStatus && e.target.closest("[data-fls-info]")) {
+      bodyLockToggle();
+      document.documentElement.toggleAttribute("data-fls-info-open");
+    }
+  });
+}
+window.addEventListener("load", () => {
+  infoInit();
+});
 const actions = document.querySelector(".leader-hero__actions");
 actions.addEventListener("click", (e) => {
   const button = e.target.closest(".leader-hero__action");
