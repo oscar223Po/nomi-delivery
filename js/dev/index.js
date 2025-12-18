@@ -4574,18 +4574,28 @@ function formInit() {
   formFieldsInit();
 }
 document.querySelector("[data-fls-form]") ? window.addEventListener("load", formInit) : null;
-const CONTROL_TYPES = ["book", "choose", "delivery"];
+const CONTROL_TYPES = ["book", "done", "choose", "delivery"];
+function isAnyControlOpen() {
+  return CONTROL_TYPES.some(
+    (type) => document.documentElement.hasAttribute(`data-fls-${type}-open`)
+  );
+}
 function initControl(type) {
   document.addEventListener("click", (e2) => {
-    if (!bodyLockStatus) return;
     if (!e2.target.closest(`[data-fls-${type}]`)) return;
+    const html = document.documentElement;
+    const isOpen = html.hasAttribute(`data-fls-${type}-open`);
     CONTROL_TYPES.forEach((t) => {
-      if (t !== type) {
-        document.documentElement.removeAttribute(`data-fls-${t}-open`);
-      }
+      html.removeAttribute(`data-fls-${t}-open`);
     });
-    bodyLockToggle();
-    document.documentElement.toggleAttribute(`data-fls-${type}-open`);
+    if (!isOpen) {
+      html.setAttribute(`data-fls-${type}-open`, "");
+    }
+    if (isAnyControlOpen()) {
+      bodyLock();
+    } else {
+      bodyUnlock();
+    }
   });
 }
 function initAddressToggle(rootSelector, buttonSelector, activeClass) {
@@ -4600,6 +4610,7 @@ function initAddressToggle(rootSelector, buttonSelector, activeClass) {
 }
 window.addEventListener("load", () => {
   initControl("book");
+  initControl("done");
   initControl("choose");
   initControl("delivery");
   initAddressToggle(
@@ -4611,6 +4622,11 @@ window.addEventListener("load", () => {
     ".delivery",
     ".delivery__button",
     "delivery__button--active"
+  );
+  initAddressToggle(
+    ".count",
+    ".count__item",
+    "count__item--active"
   );
 });
 const actions = document.querySelector(".leader-hero__actions");

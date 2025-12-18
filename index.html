@@ -5,8 +5,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="./assets/img/shortcut.svg">
 		<title>Nomi</title>
-		<script type="module" crossorigin="" src="./js/index.min.js?v=1765996045234"></script>
-		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1765996045234">
+		<script type="module" crossorigin="" src="./js/index.min.js?v=1766037144873"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1766037144873">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -1149,10 +1149,10 @@
 									<button type="button" data-fls-calendar="" class="book__action book__action--icon-calendar">
 										<span>20.10</span>
 									</button>
-									<button type="button" class="book__action book__action--icon-time">
+									<button type="button" data-fls-time="" class="book__action book__action--icon-time">
 										<span>12:30</span>
 									</button>
-									<button type="button" class="book__action book__action--icon-people">
+									<button type="button" data-fls-count="" class="book__action book__action--icon-people">
 										<span>3</span>
 									</button>
 								</div>
@@ -1178,15 +1178,87 @@
 												<img src="./assets/img/decore/plashka.svg" alt="Decore">
 											</div>
 											<div class="stamp__body calendar">
-												<h3 class="calendar__title calendar__title--label">Дата</h3>
-												<div data-fls-yearbook="" class="calendar__yearbook"></div>
+												<div class="calendar__content">
+													<h3 class="calendar__title calendar__title--label">Дата</h3>
+													<div data-fls-yearbook="" class="calendar__yearbook"></div>
+												</div>
+												<button type="button" data-fls-button="" class="button">Выбрать</button>
+											</div>
+										</div>
+									</div>
+									<div class="stamp">
+										<div data-fls-time="" class="stamp__overlay" data-control="time"></div>
+										<div class="stamp__wrapper" data-control="time">
+											<div class="stamp__decore">
+												<img src="./assets/img/decore/plashka.svg" alt="Decore">
+											</div>
+											<div class="stamp__body time">
+												<div class="time__content">
+													<h3 class="time__title time__title--label">Время</h3>
+													<div class="time__below">
+														<span>с</span>
+														<input data-fls-input="" data-fls-input-mask="99:99" autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="00:00" class="time__input">
+														<span>до</span>
+														<input data-fls-input="" data-fls-input-mask="99:99" autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="00:00" class="time__input time__input--disable">
+													</div>
+												</div>
+												<button type="button" data-fls-button="" class="button">Выбрать</button>
+											</div>
+										</div>
+									</div>
+									<div class="stamp">
+										<div data-fls-count="" class="stamp__overlay" data-control="count"></div>
+										<div class="stamp__wrapper" data-control="count">
+											<div class="stamp__decore">
+												<img src="./assets/img/decore/plashka.svg" alt="Decore">
+											</div>
+											<div class="stamp__body count">
+												<div class="count__content">
+													<h3 class="count__title count__title--label">Количество гостей</h3>
+													<div class="count__items">
+														<button type="button" class="count__item count__item--active">1</button>
+														<button type="button" class="count__item">2</button>
+														<button type="button" class="count__item">3</button>
+														<button type="button" class="count__item">4</button>
+														<button type="button" class="count__item">5</button>
+														<button type="button" class="count__item">6</button>
+														<button type="button" class="count__item">7</button>
+														<button type="button" class="count__item">8</button>
+														<button type="button" class="count__item">9</button>
+														<button type="button" class="count__item">10</button>
+														<button type="button" class="count__item">11</button>
+														<button type="button" class="count__item">12+</button>
+													</div>
+												</div>
+												<button type="button" data-fls-button="" class="button">Выбрать</button>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-							<button type="button" data-fls-button="" data-fls-book="" class="button">Забронировать</button>
+							<button type="button" data-fls-button="" data-fls-done="" class="button">Забронировать</button>
 						</form>
+					</section>
+					<section class="control" data-control="done">
+						<div class="control__wrapper">
+							<div class="control__head">
+								<button type="button" data-fls-button="" data-fls-done="" class="control__close control__close--icon-arrow button-box"></button>
+								<h2 class="control__title control__title--title">Бронирование</h2>
+							</div>
+							<div class="control__done done">
+								<h3 class="done__title done__title--label">Заявка успешно отправлена</h3>
+								<div class="done__text">
+									<p>
+										Дождитесь обработки заявки заведением. Отследить актуальный статус вы можетена главной странице
+									</p>
+								</div>
+								<div class="done__icon done__icon--icon-reserve"></div>
+							</div>
+						</div>
+						<div class="control__actions">
+							<button type="button" data-fls-button="" data-fls-done="" class="button">На главную</button>
+							<button type="button" data-fls-button="" class="button button--black">Отменить бронь</button>
+						</div>
 					</section>
 					<section class="control" data-control="choose">
 						<div class="control__wrapper">
