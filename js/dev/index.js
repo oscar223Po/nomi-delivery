@@ -1043,31 +1043,6 @@ const options = {
 };
 const calendar = new Calendar("[data-fls-yearbook]", options);
 calendar.init();
-const STAMP_TYPES = ["calendar", "time", "count"];
-const lockEl = document.querySelector(".control-lock");
-function updateControlLock() {
-  const isAnyOpen = STAMP_TYPES.some(
-    (type) => document.documentElement.hasAttribute(`data-fls-${type}-open`)
-  );
-  lockEl?.classList.toggle("control-lock--active", isAnyOpen);
-}
-function initStamp(type) {
-  document.addEventListener("click", (e2) => {
-    if (!e2.target.closest(`[data-fls-${type}]`)) return;
-    STAMP_TYPES.forEach((t) => {
-      if (t !== type) {
-        document.documentElement.removeAttribute(`data-fls-${t}-open`);
-      }
-    });
-    document.documentElement.toggleAttribute(`data-fls-${type}-open`);
-    updateControlLock();
-  });
-}
-window.addEventListener("load", () => {
-  initStamp("calendar");
-  initStamp("time");
-  initStamp("count");
-});
 function spollers() {
   const spollersArray = document.querySelectorAll("[data-fls-spollers]");
   if (spollersArray.length > 0) {
@@ -4574,6 +4549,31 @@ function formInit() {
   formFieldsInit();
 }
 document.querySelector("[data-fls-form]") ? window.addEventListener("load", formInit) : null;
+const STAMP_TYPES = ["calendar", "time", "count"];
+const lockEl = document.querySelector(".control-lock");
+function updateControlLock() {
+  const isAnyOpen = STAMP_TYPES.some(
+    (type) => document.documentElement.hasAttribute(`data-fls-${type}-open`)
+  );
+  lockEl?.classList.toggle("control-lock--active", isAnyOpen);
+}
+function initStamp(type) {
+  document.addEventListener("click", (e2) => {
+    if (!e2.target.closest(`[data-fls-${type}]`)) return;
+    STAMP_TYPES.forEach((t) => {
+      if (t !== type) {
+        document.documentElement.removeAttribute(`data-fls-${t}-open`);
+      }
+    });
+    document.documentElement.toggleAttribute(`data-fls-${type}-open`);
+    updateControlLock();
+  });
+}
+window.addEventListener("load", () => {
+  initStamp("calendar");
+  initStamp("time");
+  initStamp("count");
+});
 const CONTROL_TYPES = ["book", "done", "choose", "delivery"];
 function isAnyControlOpen() {
   return CONTROL_TYPES.some(
