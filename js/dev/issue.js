@@ -1,7 +1,7 @@
 import "./app.min.js";
-import "./quantity.min.js";
-/* empty css            */
-function initSizeToggle(rootSelector, buttonSelector, activeClass) {
+/* empty css          */
+import "./controls.min.js";
+function initIssueToggle(rootSelector, buttonSelector, activeClass) {
   const root = document.querySelector(rootSelector);
   if (!root) return;
   root.addEventListener("click", (e) => {
@@ -12,9 +12,14 @@ function initSizeToggle(rootSelector, buttonSelector, activeClass) {
   });
 }
 window.addEventListener("load", () => {
-  initSizeToggle(
-    ".dish",
-    ".size-dish__action",
-    "size-dish__action--active"
+  initIssueToggle(
+    ".time-issue",
+    ".time-issue__button",
+    "time-issue__button--active"
+  );
+  initIssueToggle(
+    ".metod-issue",
+    ".metod-issue__button",
+    "metod-issue__button--active"
   );
 });
