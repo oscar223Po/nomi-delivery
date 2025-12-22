@@ -388,6 +388,7 @@
 }
 .menu__logo::before {
   font-size: 1.625rem;
+  font-weight: 400;
 }
 .menu__list {
   display: flex;
@@ -473,6 +474,9 @@
 }
 .panel.panel-gnf {
   gap: 0;
+  grid-template-rows: 0fr;
+}
+.panel.panel-gnb {
   grid-template-rows: 0fr;
 }
 .panel__head {
