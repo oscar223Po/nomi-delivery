@@ -61,13 +61,22 @@
 .item-cart__content img {
   width: 5.625rem;
   aspect-ratio: 1;
+  object-fit: cover;
   border-radius: 0.3125rem;
 }
 .item-cart__info {
   gap: 0.3125rem;
   display: flex;
-  max-width: 7.8125rem;
   flex-direction: column;
+}
+.item-cart__main-info {
+  gap: 0.3125rem;
+  display: flex;
+  flex-direction: column;
+}
+.item-cart__below-info {
+  font-size: 0.6875rem;
+  line-height: 1.2;
 }
 .item-cart__action {
   display: flex;
