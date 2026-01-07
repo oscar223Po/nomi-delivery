@@ -1,0 +1,516 @@
+<div data-fls-panels class="panels">
+
+	<section class="panel panel-gnb" data-panel="settings">
+		<div class="panel__wrapper">
+			<div class="panel__head">
+				<button type="button" data-fls-button class="panel__close panel__close--icon-arrow button-box" data-panel-close></button>
+				<h2 class="panel__title panel__title--title">Настройки</h2>
+			</div>
+			<form action="#" data-fls-form class="panel__shape shape shape-settings">
+				<div class="shape__body">
+					<div class="shape__label">
+						<span class="shape__span shape__span--label">Имя</span>
+						<input data-fls-input required autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Имя пользователя" class="input">
+					</div>
+					<div class="shape__label">
+						<span class="shape__span shape__span--label">Дата рождения</span>
+						<input data-fls-input required data-fls-input-mask="99.99.9999" autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="00.00.0000" class="input">
+					</div>
+					<div class="shape__label">
+						<span class="shape__span shape__span--label">Пол</span>
+						<select name="form[]" data-fls-select data-fls-select-modif="form">
+							<option value="1" selected>Мужской</option>
+							<option value="2">Женский</option>
+						</select>
+					</div>
+					<div class="shape__label">
+						<span class="shape__span shape__span--label">Телефон при регистрации</span>
+						<input data-fls-input required data-fls-input-mask="+7-999-999-99-99" autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="+7-000-000-00-00" class="input">
+					</div>
+					<div class="shape__label">
+						<span class="shape__span shape__span--label">Телефон для связи</span>
+						<input data-fls-input required data-fls-input-mask="+7-999-999-99-99" autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="+7-000-000-00-00" class="input">
+					</div>
+				</div>
+			</form>
+		</div>
+		<button type="button" class="panel__button panel__button--payment panel__button--icon-arrow panel__button--label" data-open-panel="payment">Способ оплаты</button>
+	</section>
+
+	<section class="panel" data-panel="payment">
+		<div class="panel__wrapper">
+			<div class="panel__head">
+				<button type="button" data-fls-button class="panel__close panel__close--icon-arrow button-box" data-panel-close></button>
+				<h2 class="panel__title panel__title--title">Способ оплаты</h2>
+			</div>
+			<div class="panel__payment payment">
+				<div class="payment__item item-payment item-payment--active">
+					<div class="item-payment__main">
+						<span>Т-Банк</span>
+						<div class="item-payment__label">MIR ** 0000</div>
+					</div>
+					<button type="button" class="item-payment__delete item-payment__delete--icon-trash"></button>
+				</div>
+				<div class="payment__item item-payment">
+					<div class="item-payment__main">
+						<span>Сбер</span>
+						<div class="item-payment__label">MIR ** 1111</div>
+					</div>
+					<button type="button" class="item-payment__delete item-payment__delete--icon-trash"></button>
+				</div>
+			</div>
+		</div>
+		<button type="button" class="button" data-fls-button data-open-panel="add-card">Добавить карту</button>
+	</section>
+
+	<section class="panel panel-gnf" data-panel="add-card">
+		<div class="panel__head">
+			<button type="button" data-fls-button class="panel__close panel__close--icon-arrow button-box" data-panel-close></button>
+			<h2 class="panel__title panel__title--title">Добавить карту</h2>
+		</div>
+		<form action="#" data-fls-form class="panel__add add">
+			<div class="add__body">
+				<div class="add__title add__title--label">Номер карты</div>
+				<div class="add__label">
+					<span>Номер карты</span>
+					<input data-fls-input required class="input input--data" data-fls-input-mask="9999-9999-9999-9999" autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="0000-0000-0000-0000">
+				</div>
+				<div class="add__addition">
+					<div class="add__label">
+						<span>мм / гг</span>
+						<input data-fls-input required class="input input--data" data-fls-input-mask="99 / 99" autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="00 / 00">
+					</div>
+					<div class="add__label">
+						<span>CVV</span>
+						<input data-fls-input required class="input input--data" data-fls-input-mask="999" autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="000">
+					</div>
+				</div>
+			</div>
+			<button type="submit" class="button" data-fls-button>Сохранить</button>		
+		</form>
+	</section>
+
+	<section class="panel" data-panel="orders-empty">
+		<div class="panel__wrapper">
+			<div class="panel__head">
+				<button type="button" data-fls-button class="panel__close panel__close--icon-arrow button-box" data-panel-close></button>
+				<h2 class="panel__title panel__title--title">Мои заказы</h2>
+			</div>
+			<div class="panel__empty empty">
+				<div class="empty__icon empty__icon--icon-empty-box"></div>
+				<div class="empty__alert empty__alert--label">
+					У вас еще не было заказов
+				</div>
+			</div>
+		</div>
+		<a href="#" class="button" data-fls-button>Выбрать и заказать</a>
+	</section>
+
+	<section class="panel panel-gnf" data-panel="orders">
+		<div class="panel__head">
+			<button type="button" data-fls-button class="panel__close panel__close--icon-arrow button-box" data-panel-close></button>
+			<h2 class="panel__title panel__title--title">Мои заказы</h2>
+		</div>
+		<div data-fls-spollers class="panel__orders spollers">
+			<details class="spollers__item">
+				<summary class="spollers__title title-spollers">
+					<div class="title-spollers__head">
+						<h3 class="title-spollers__name-head">Название ресторана</h3>
+						<div class="title-spollers__cost-head">0 000 ₽</div>
+					</div>
+					<div class="title-spollers__info">
+						<div class="title-spollers__date-info">00.00.0000</div>
+						<div class="title-spollers__status-info">Завершен</div>
+					</div>
+					<div class="title-spollers__label">#1234567890</div>
+				</summary>
+				<div class="spollers__body body-spollers">
+					<div class="body-spollers__label">Состав</div>
+					<div class="body-spollers__items">
+						<div class="body-spollers__item">
+							<div class="body-spollers__content-item">
+								<img src="@img/portion/01.jpg" alt="Image">
+								<span>Товар 1</span>
+							</div>
+							<div class="body-spollers__cost-item">0 000</div>
+						</div>
+						<div class="body-spollers__item">
+							<div class="body-spollers__content-item">
+								<img src="@img/portion/02.jpg" alt="Image">
+								<span>Товар 2</span>
+							</div>
+							<div class="body-spollers__cost-item">0 000</div>
+						</div>
+						<div class="body-spollers__item">
+							<div class="body-spollers__content-item">
+								<img src="@img/portion/03.jpg" alt="Image">
+								<span>Товар 3</span>
+							</div>
+							<div class="body-spollers__cost-item">0 000</div>
+						</div>
+					</div>
+					<div class="body-spollers__actions">
+						<button type="button" class="body-spollers__button body-spollers__button--black">Изменить</button>
+						<button type="button" class="body-spollers__button body-spollers__button--blue">Повторить</button>
+					</div>
+				</div>
+			</details>
+			<details class="spollers__item">
+				<summary class="spollers__title title-spollers">
+					<div class="title-spollers__head">
+						<h3 class="title-spollers__name-head">Название ресторана</h3>
+						<div class="title-spollers__cost-head">0 000 ₽</div>
+					</div>
+					<div class="title-spollers__info">
+						<div class="title-spollers__date-info">00.00.0000</div>
+						<div class="title-spollers__status-info">Завершен</div>
+					</div>
+					<div class="title-spollers__label">#1234567890</div>
+				</summary>
+				<div class="spollers__body body-spollers">
+					<div class="body-spollers__label">Состав</div>
+					<div class="body-spollers__items">
+						<div class="body-spollers__item">
+							<div class="body-spollers__content-item">
+								<img src="@img/portion/01.jpg" alt="Image">
+								<span>Товар 1</span>
+							</div>
+							<div class="body-spollers__cost-item">0 000</div>
+						</div>
+						<div class="body-spollers__item">
+							<div class="body-spollers__content-item">
+								<img src="@img/portion/02.jpg" alt="Image">
+								<span>Товар 2</span>
+							</div>
+							<div class="body-spollers__cost-item">0 000</div>
+						</div>
+						<div class="body-spollers__item">
+							<div class="body-spollers__content-item">
+								<img src="@img/portion/03.jpg" alt="Image">
+								<span>Товар 3</span>
+							</div>
+							<div class="body-spollers__cost-item">0 000</div>
+						</div>
+					</div>
+					<div class="body-spollers__actions">
+						<button type="button" class="body-spollers__button body-spollers__button--black">Изменить</button>
+						<button type="button" class="body-spollers__button body-spollers__button--blue">Повторить</button>
+					</div>
+				</div>
+			</details>
+			<details class="spollers__item">
+				<summary class="spollers__title title-spollers">
+					<div class="title-spollers__head">
+						<h3 class="title-spollers__name-head">Название ресторана</h3>
+						<div class="title-spollers__cost-head">0 000 ₽</div>
+					</div>
+					<div class="title-spollers__info">
+						<div class="title-spollers__date-info">00.00.0000</div>
+						<div class="title-spollers__status-info">Завершен</div>
+					</div>
+					<div class="title-spollers__label">#1234567890</div>
+				</summary>
+				<div class="spollers__body body-spollers">
+					<div class="body-spollers__label">Состав</div>
+					<div class="body-spollers__items">
+						<div class="body-spollers__item">
+							<div class="body-spollers__content-item">
+								<img src="@img/portion/01.jpg" alt="Image">
+								<span>Товар 1</span>
+							</div>
+							<div class="body-spollers__cost-item">0 000</div>
+						</div>
+						<div class="body-spollers__item">
+							<div class="body-spollers__content-item">
+								<img src="@img/portion/02.jpg" alt="Image">
+								<span>Товар 2</span>
+							</div>
+							<div class="body-spollers__cost-item">0 000</div>
+						</div>
+						<div class="body-spollers__item">
+							<div class="body-spollers__content-item">
+								<img src="@img/portion/03.jpg" alt="Image">
+								<span>Товар 3</span>
+							</div>
+							<div class="body-spollers__cost-item">0 000</div>
+						</div>
+					</div>
+					<div class="body-spollers__actions">
+						<button type="button" class="body-spollers__button body-spollers__button--black">Изменить</button>
+						<button type="button" class="body-spollers__button body-spollers__button--blue">Повторить</button>
+					</div>
+				</div>
+			</details>
+		</div>
+	</section>
+
+	<section class="panel" data-panel="chosen-empty">
+		<div class="panel__wrapper">
+			<div class="panel__head">
+				<button type="button" data-fls-button class="panel__close panel__close--icon-arrow button-box" data-panel-close></button>
+				<h2 class="panel__title panel__title--title">Избранное</h2>
+			</div>
+			<div class="panel__empty empty">
+				<div class="empty__icon empty__icon--icon-bookmark"></div>
+				<div class="empty__alert empty__alert--label">
+					Вы еще ничего не добавили в избранное
+				</div>
+			</div>
+		</div>
+		<a href="#" class="button" data-fls-button>Выбрать и заказать</a>
+	</section>
+
+	<section class="panel panel-gnf" data-panel="chosen">
+		<div class="panel__head">
+			<button type="button" data-fls-button class="panel__close panel__close--icon-arrow button-box" data-panel-close></button>
+			<h2 class="panel__title panel__title--title">Избранное</h2>
+		</div>
+		<div data-fls-spollers class="panel__orders spollers">
+			<details class="spollers__item">
+				<summary class="spollers__title title-spollers">
+					<div class="title-spollers__head">
+						<h3 class="title-spollers__name-head">Название ресторана</h3>
+						<button type="button" class="title-spollers__mark-head title-spollers__mark-head--icon-bookmark"></button>
+					</div>
+					<div class="title-spollers__label">В избранном</div>
+				</summary>
+				<div class="spollers__body body-spollers">
+					<div class="body-spollers__label">Состав</div>
+					<div class="body-spollers__items">
+						<div class="body-spollers__item">
+							<div class="body-spollers__content-item">
+								<img src="@img/portion/01.jpg" alt="Image">
+								<span>Товар 1</span>
+							</div>
+							<div class="body-spollers__cost-item">0 000</div>
+						</div>
+						<div class="body-spollers__item">
+							<div class="body-spollers__content-item">
+								<img src="@img/portion/02.jpg" alt="Image">
+								<span>Товар 2</span>
+							</div>
+							<div class="body-spollers__cost-item">0 000</div>
+						</div>
+						<div class="body-spollers__item">
+							<div class="body-spollers__content-item">
+								<img src="@img/portion/03.jpg" alt="Image">
+								<span>Товар 3</span>
+							</div>
+							<div class="body-spollers__cost-item">0 000</div>
+						</div>
+					</div>
+					<div class="body-spollers__actions">
+						<button type="button" class="body-spollers__button body-spollers__button--black">Изменить</button>
+						<button type="button" class="body-spollers__button body-spollers__button--blue">Повторить</button>
+					</div>
+				</div>
+			</details>
+			<details class="spollers__item">
+				<summary class="spollers__title title-spollers">
+					<div class="title-spollers__head">
+						<h3 class="title-spollers__name-head">Название ресторана</h3>
+						<button type="button" class="title-spollers__mark-head title-spollers__mark-head--icon-bookmark"></button>
+					</div>
+					<div class="title-spollers__label">В избранном</div>
+				</summary>
+				<div class="spollers__body body-spollers">
+					<div class="body-spollers__label">Состав</div>
+					<div class="body-spollers__items">
+						<div class="body-spollers__item">
+							<div class="body-spollers__content-item">
+								<img src="@img/portion/01.jpg" alt="Image">
+								<span>Товар 1</span>
+							</div>
+							<div class="body-spollers__cost-item">0 000</div>
+						</div>
+						<div class="body-spollers__item">
+							<div class="body-spollers__content-item">
+								<img src="@img/portion/02.jpg" alt="Image">
+								<span>Товар 2</span>
+							</div>
+							<div class="body-spollers__cost-item">0 000</div>
+						</div>
+						<div class="body-spollers__item">
+							<div class="body-spollers__content-item">
+								<img src="@img/portion/03.jpg" alt="Image">
+								<span>Товар 3</span>
+							</div>
+							<div class="body-spollers__cost-item">0 000</div>
+						</div>
+					</div>
+					<div class="body-spollers__actions">
+						<button type="button" class="body-spollers__button body-spollers__button--black">Изменить</button>
+						<button type="button" class="body-spollers__button body-spollers__button--blue">Повторить</button>
+					</div>
+				</div>
+			</details>
+			<details class="spollers__item">
+				<summary class="spollers__title title-spollers">
+					<div class="title-spollers__head">
+						<h3 class="title-spollers__name-head">Название ресторана</h3>
+						<button type="button" class="title-spollers__mark-head title-spollers__mark-head--icon-bookmark"></button>
+					</div>
+					<div class="title-spollers__label">В избранном</div>
+				</summary>
+				<div class="spollers__body body-spollers">
+					<div class="body-spollers__label">Состав</div>
+					<div class="body-spollers__items">
+						<div class="body-spollers__item">
+							<div class="body-spollers__content-item">
+								<img src="@img/portion/01.jpg" alt="Image">
+								<span>Товар 1</span>
+							</div>
+							<div class="body-spollers__cost-item">0 000</div>
+						</div>
+						<div class="body-spollers__item">
+							<div class="body-spollers__content-item">
+								<img src="@img/portion/02.jpg" alt="Image">
+								<span>Товар 2</span>
+							</div>
+							<div class="body-spollers__cost-item">0 000</div>
+						</div>
+						<div class="body-spollers__item">
+							<div class="body-spollers__content-item">
+								<img src="@img/portion/03.jpg" alt="Image">
+								<span>Товар 3</span>
+							</div>
+							<div class="body-spollers__cost-item">0 000</div>
+						</div>
+					</div>
+					<div class="body-spollers__actions">
+						<button type="button" class="body-spollers__button body-spollers__button--black">Изменить</button>
+						<button type="button" class="body-spollers__button body-spollers__button--blue">Повторить</button>
+					</div>
+				</div>
+			</details>
+		</div>
+	</section>
+
+	<section class="panel panel-gnf" data-panel="address">
+		<div class="panel__head">
+			<button type="button" data-fls-button class="panel__close panel__close--icon-arrow button-box" data-panel-close></button>
+			<h2 class="panel__title panel__title--title">Мои адреса</h2>
+		</div>
+		<div class="panel__address address">
+			<button type="button" class="address__add address__add--icon-plus" data-open-panel="address-new">Добавить адрес</button>
+			<div class="address__history">
+				<button type="button" class="address__button address__button--icon-location" data-open-panel="address-edit">
+					<div class="address__inner">
+						<div class="address__label">Название ресторана</div>
+						<div class="address__location">ул. Пушкина, д. 00</div>
+					</div>
+				</button>
+				<button type="button" class="address__button address__button--icon-location" data-open-panel="address-edit">
+					<div class="address__inner">
+						<div class="address__label">Название ресторана</div>
+						<div class="address__location">ул. Пушкина, д. 00</div>
+					</div>
+				</button>
+				<button type="button" class="address__button address__button--icon-location" data-open-panel="address-edit">
+					<div class="address__inner">
+						<div class="address__label">Название ресторана</div>
+						<div class="address__location">ул. Пушкина, д. 00</div>
+					</div>
+				</button>
+				<button type="button" class="address__button address__button--icon-location" data-open-panel="address-edit">
+					<div class="address__inner">
+						<div class="address__label">Название ресторана</div>
+						<div class="address__location">ул. Пушкина, д. 00</div>
+					</div>
+				</button>
+			</div>
+		</div>
+	</section>
+
+	<section class="panel panel-gnf" data-panel="address-new">
+		<div class="panel__head">
+			<button type="button" data-fls-button class="panel__close panel__close--icon-arrow button-box" data-panel-close></button>
+			<h2 class="panel__title panel__title--title">Новый адрес</h2>
+		</div>
+		<form action="#" data-fls-form class="panel__shape shape">
+			<div class="shape__body">
+				<div class="shape__label">
+					<span class="shape__span shape__span--label">Название</span>
+					<input data-fls-input required autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Введите название" class="input">
+				</div>
+				<div class="shape__label">
+					<span class="shape__span shape__span--label">Улица</span>
+					<input data-fls-input required autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Введите название улицы" class="input">
+				</div>
+				<div class="shape__labels">
+					<div class="shape__label">
+						<span class="shape__span shape__span--label">Подъезд</span>
+						<input data-fls-input required autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Номер подъезда" class="input">
+					</div>
+					<div class="shape__label">
+						<span class="shape__span shape__span--label">Домофон</span>
+						<input data-fls-input required autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Домофон" class="input">
+					</div>
+					<div class="shape__label">
+						<span class="shape__span shape__span--label">Квартира</span>
+						<input data-fls-input required autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Номер квартиры" class="input">
+					</div>
+					<div class="shape__label">
+						<span class="shape__span shape__span--label">Этаж</span>
+						<input data-fls-input required autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Этаж" class="input">
+					</div>
+				</div>
+				<div class="shape__label">
+					<span class="shape__span shape__span--label">Комментарий</span>
+					<input data-fls-input required autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Комментарий для курьера" class="input">
+				</div>
+			</div>
+			<button type="submit" data-fls-button class="button">Сохранить</button>		
+		</form>
+	</section>
+
+	<section class="panel panel-gnf" data-panel="address-edit">
+		<div class="panel__head">
+			<button type="button" data-fls-button class="panel__close panel__close--icon-arrow button-box" data-panel-close></button>
+			<h2 class="panel__title panel__title--title">Новый адрес</h2>
+		</div>
+		<form action="#" data-fls-form class="panel__shape shape">
+			<div class="shape__body">
+				<div class="shape__label">
+					<span class="shape__span shape__span--label">Название</span>
+					<input data-fls-input required autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Введите название" value="Название адреса 1" class="input">
+				</div>
+				<div class="shape__label">
+					<span class="shape__span shape__span--label">Улица</span>
+					<input data-fls-input required autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Введите название улицы" value="Пушкина" class="input">
+				</div>
+				<div class="shape__labels">
+					<div class="shape__label">
+						<span class="shape__span shape__span--label">Подъезд</span>
+						<input data-fls-input required autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Номер подъезда" value="00" class="input">
+					</div>
+					<div class="shape__label">
+						<span class="shape__span shape__span--label">Домофон</span>
+						<input data-fls-input required autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Домофон" value="00" class="input">
+					</div>
+					<div class="shape__label">
+						<span class="shape__span shape__span--label">Квартира</span>
+						<input data-fls-input required autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Номер квартиры" value="00" class="input">
+					</div>
+					<div class="shape__label">
+						<span class="shape__span shape__span--label">Этаж</span>
+						<input data-fls-input required autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Этаж" value="00" class="input">
+					</div>
+				</div>
+				<div class="shape__label">
+					<span class="shape__span shape__span--label">Комментарий</span>
+					<input data-fls-input required autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Комментарий для курьера" value="Комментарий для курьера" class="input">
+				</div>
+			</div>
+			<button type="button" data-fls-button class="button">Сохранить</button>		
+		</form>
+	</section>
+
+	<section class="panel" data-panel="team">
+		<div class="panel__head">
+			<button type="button" data-fls-button class="panel__close panel__close--icon-arrow button-box" data-panel-close></button>
+			<h2 class="panel__title panel__title--title">Сотрудничество</h2>
+		</div>
+	</section>
+
+</div>

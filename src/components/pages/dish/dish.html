@@ -1,0 +1,100 @@
+<script type="module" src="@components/pages/dish/dish.js"></script>
+<link rel="stylesheet" href="@components/pages/dish/dish.scss">
+
+<main class="page page--dish">
+	<include src="@components/custom/preview/preview-dish.html"></include>
+	<section class="page__dish dish">
+		<div class="dish__container">
+			<div class="dish__decore">
+				<img src="@img/decore/plashka.svg" alt="Decore">
+			</div>
+			<div class="dish__body">
+				<h1 class="dish__title">Поке с креветками и соусом сладкий васаби</h1>
+				<div class="dish__info info-dish">
+					<div class="info-dish__item info-dish__item--icon-price">
+						<b>Цена</b>
+						<span>530 ₽</span>
+					</div>
+					<div class="info-dish__item info-dish__item--icon-weight">
+						<b>Вес</b>
+						<span>367 г.</span>
+					</div>
+				</div>
+				<div class="dish__text">
+					<p>
+						Рис, креветки тигровые, огурец, томаты черри, бобы эдамаме, салат чука, соус васаби, нори, кунжут.
+					</p>
+				</div>
+				<div class="dish__size size-dish">
+					<h2 class="size-dish__title size-dish__title--label">Размер</h2>
+					<div class="size-dish__actions">
+						<button type="button" class="size-dish__action size-dish__action--active">
+							<b>Средний</b>
+							<span>350 ₽</span>
+						</button>
+						<button type="button" class="size-dish__action">
+							<b>Большой</b>
+							<span>530 ₽</span>
+						</button>
+						<button type="button" class="size-dish__action">
+							<b>Экстра</b>
+							<span>800 ₽</span>
+						</button>
+					</div>
+				</div>
+				<div class="dish__var var-dish">
+					<div class="var-dish__block">
+						<h2 class="var-dish__title var-dish__title--label">Степень прожарки</h2>
+						<div data-fls-radio class="var-dish__options options">
+							<label class="options__item">
+								<input class="options__input" checked type="radio" value="1" name="state">
+								<span class="options__text">Rare</span>
+							</label>
+							<label class="options__item">
+								<input class="options__input" type="radio" value="2" name="state">
+								<span class="options__text">Medium</span>
+							</label>
+							<label class="options__item">
+								<input class="options__input" type="radio" value="3" name="state">
+								<span class="options__text">Well Done</span>
+							</label>
+						</div>
+					</div>
+					<div class="var-dish__block">
+						<h2 class="var-dish__title var-dish__title--label">Котлета на выбор</h2>
+						<div data-fls-radio class="var-dish__options options">
+							<label class="options__item">
+								<input class="options__input" checked type="radio" value="1" name="choose">
+								<span class="options__text">Куринная</span>
+							</label>
+							<label class="options__item">
+								<input class="options__input" type="radio" value="2" name="choose">
+								<span class="options__text">Из мраморной говядины +120 ₽</span>
+							</label>
+						</div>
+					</div>
+					<div class="var-dish__block">
+						<h2 class="var-dish__title var-dish__title--label">Котлета на выбор</h2>
+						<div class="var-dish__checkboxes">
+							<label data-fls-checkbox class="var-dish__checkbox checkbox">
+								<input data-error="Error" class="checkbox__input" checked type="checkbox" value="1"
+									name="form[]">
+								<span class="checkbox__text">Соус васаби +20 ₽</span>
+							</label>
+							<label data-fls-checkbox class="var-dish__checkbox checkbox">
+								<input data-error="Error" class="checkbox__input" type="checkbox" value="1" name="form[]">
+								<span class="checkbox__text">Палочки +5 ₽</span>
+							</label>
+							<label data-fls-checkbox class="var-dish__checkbox checkbox">
+								<input data-error="Error" class="checkbox__input" type="checkbox" value="1" name="form[]">
+								<span class="checkbox__text">Соевый соус +30 ₽</span>
+							</label>
+						</div>
+					</div>
+					<button data-fls-button type="button" class="var-dish__button">Показать все</button>
+				</div>
+			</div>
+		</div>
+	</section>
+	<include src="@components/layout/gain/gain.html"></include>
+</main>

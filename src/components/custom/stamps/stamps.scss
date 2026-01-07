@@ -1,0 +1,164 @@
+.stamp {
+	// .stamp__overlay
+	&__overlay {
+		top: 0;
+		left: 0;
+		opacity: 0;
+		z-index: 10;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		position: fixed;
+		visibility: hidden;
+		transition:
+			opacity 0.3s,
+			visibility 0.3s;
+		background-color: rgba(#091328, 0.4);
+		[data-fls-calendar-open] &[data-control="calendar"],
+		[data-fls-time-open] &[data-control="time"],
+		[data-fls-count-open] &[data-control="count"],
+		[data-fls-review-open] &[data-control="review"],
+		[data-fls-card-open] &[data-control="card"],
+		[data-fls-promo-open] &[data-control="promo"],
+		[data-fls-intime-open] &[data-control="intime"] {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+	// .stamp__wrapper
+	&__wrapper {
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		z-index: 10;
+		opacity: 0;
+		position: fixed;
+		visibility: hidden;
+		background-color: #fff;
+		transition:
+			opacity 0.3s,
+			visibility 0.3s;
+		padding: 16px 15px 30px 15px;
+		// transform: translateY(calc(100% + 29px));
+		&::before,
+		&::after {
+			top: 0;
+			content: "";
+			height: 20px;
+			translate: 0 -100%;
+			position: absolute;
+			background-color: #fff;
+			width: calc(50% - 77.5px);
+		}
+		&::before {
+			left: 0;
+			border-radius: 35px 0 0 0;
+		}
+		&::after {
+			right: 0;
+			border-radius: 0 35px 0 0;
+		}
+		[data-fls-calendar-open] &[data-control="calendar"],
+		[data-fls-time-open] &[data-control="time"],
+		[data-fls-count-open] &[data-control="count"],
+		[data-fls-review-open] &[data-control="review"],
+		[data-fls-card-open] &[data-control="card"],
+		[data-fls-promo-open] &[data-control="promo"],
+		[data-fls-intime-open] &[data-control="intime"] {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+	// .stamp__decore
+	&__decore {
+		top: 0;
+		left: 0;
+		right: 0;
+		display: flex;
+		position: absolute;
+		translate: 0 -100%;
+		justify-content: center;
+	}
+	// .stamp__body
+	&__body {
+		gap: 30px;
+		display: grid;
+	}
+}
+// Time
+.time {
+	// .time__below
+	&__below {
+		gap: 14px;
+		display: flex;
+		font-size: 20px;
+		align-items: center;
+		span {
+			translate: 0 -3px;
+			display: inline-flex;
+		}
+	}
+	// .time__input
+	&__input {
+		width: 70px;
+		color: #fff;
+		outline: none;
+		font-weight: 700;
+		border-radius: 5px;
+		text-align: center;
+		padding: 4px 7px 6px 7px;
+		background-color: $primaryColor;
+		&::placeholder {
+			color: #fff;
+		}
+	}
+}
+// Count
+.count {
+	// .count__items
+	&__items {
+		gap: 14px;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+	}
+	// .count__item
+	&__item {
+		height: 45px;
+		color: #fff;
+		font-size: 20px;
+		font-weight: 700;
+		border-radius: 5px;
+		text-align: center;
+		background-color: $primaryColor;
+		// .count__item--active
+		&--active {
+			opacity: 0.7;
+		}
+	}
+}
+// Review
+.review {
+	// .review__textarea
+	&__textarea {
+		resize: none !important;
+		min-height: 160px !important;
+	}
+}
+// Card
+.card {
+	// .card__label
+	&__label {
+		width: 100%;
+		span {
+			font-size: 10px;
+			color: $grayColor;
+			display: inline-flex;
+		}
+	}
+	// .card__addition
+	&__addition {
+		gap: 30px;
+		display: flex;
+		padding-top: 20px;
+	}
+}

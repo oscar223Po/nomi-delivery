@@ -1,0 +1,47 @@
+.total {
+	left: 0;
+	bottom: 0;
+	z-index: 1;
+	width: 100%;
+	display: flex;
+	position: fixed;
+	padding-block: 17px;
+	background-color: #f6f8fc;
+	border-radius: 20px 20px 0 0;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px -1px 4px;
+	// .total__container
+	&__container {
+		width: 100%;
+		position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			width: 140px;
+			aspect-ratio: 1;
+			top: 10px;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			translate: 30px 0;
+			background: url("@img/decore/aster.svg") 0 0 no-repeat;
+		}
+	}
+	// .total__main
+	&__main {
+		display: flex;
+		font-weight: 700;
+		align-items: center;
+		justify-content: space-between;
+		&:not(:last-child) {
+			margin-bottom: 24px;
+		}
+	}
+	// .total__label
+	&__label {
+		font-size: 20px;
+	}
+	// .total__total
+	&__total {
+		font-size: 18px;
+	}
+}

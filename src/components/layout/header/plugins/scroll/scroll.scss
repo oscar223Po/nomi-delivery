@@ -1,0 +1,16 @@
+[data-fls-header-scroll] {
+	&.--header-scroll {
+		padding-block: 12px;
+		background-color: rgba($primaryColor, 0.85);
+	}
+}
+
+[data-fls-header-scroll-show] {
+	&.--header-scroll {
+		transition: translate 0.3s;
+		translate: 0px -100%;
+	}
+	&.--header-show {
+		translate: 0 0;
+	}
+}

@@ -1,0 +1,91 @@
+.portion {
+	position: relative;
+	// .portion__labels
+	&__labels {
+		top: 0;
+		left: 5px;
+		row-gap: 3px;
+		color: #fff;
+		display: flex;
+		flex-wrap: wrap;
+		column-gap: 5px;
+		translate: 0 -50%;
+		padding-right: 5px;
+		position: absolute;
+		align-items: center;
+		span {
+			font-size: 10px;
+			font-weight: 700;
+			border-radius: 7px;
+			padding: 1px 5px 2px 5px;
+			background-color: $mainColor;
+		}
+	}
+	// .portion__body
+	&__body {
+		height: 100%;
+		display: grid;
+		overflow: hidden;
+		border-radius: 15px;
+		background-color: #f6f8fc;
+		grid-template-rows: auto 1fr;
+		box-shadow:
+			rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+			rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+		transition: background-color 0.3s;
+		&--active {
+			background-color: $primaryColor;
+			.portion__info {
+				color: #fff;
+			}
+		}
+	}
+	// .portion__image
+	&__image {
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	// .portion__content
+	&__content {
+		gap: 15px;
+		display: grid;
+		padding: 15px 12px;
+		grid-template-rows: 1fr auto;
+	}
+	// .portion__info
+	&__info {
+		gap: 12px;
+		display: flex;
+		font-weight: 700;
+		flex-direction: column;
+		transition: color 0.3s;
+		span {
+			&:first-child {
+				font-size: 13px;
+				line-height: 1.25;
+			}
+			&:last-child {
+				font-weight: 400;
+			}
+		}
+	}
+	// .portion__button
+	&__button {
+		width: 100%;
+		display: flex;
+		color: #fff;
+		font-weight: 700;
+		border-radius: 5px;
+		padding-block: 8px;
+		align-items: center;
+		display: inline-flex;
+		justify-content: center;
+		background-color: $primaryColor;
+		&.hidden {
+			display: none;
+		}
+	}
+}

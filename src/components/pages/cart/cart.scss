@@ -1,0 +1,127 @@
+.page {
+	// .page--cart
+	&--cart {
+		padding-bottom: 150px;
+	}
+	// .page__cart
+	&__cart {
+	}
+}
+.cart {
+	// .cart__head
+	&__head {
+		top: 0;
+		left: 0;
+		gap: 10px;
+		z-index: 1;
+		display: flex;
+		flex-wrap: wrap;
+		position: sticky;
+		padding-block: 15px;
+		align-items: center;
+		margin-bottom: 25px;
+		padding-inline: 15px;
+		margin-inline: -15px;
+		background-color: #fff;
+		justify-content: space-between;
+	}
+	// .cart__close
+	&__close {
+		&::before {
+			rotate: 180deg;
+		}
+	}
+	// .cart__title
+	&__title {
+		gap: 12px;
+		display: flex;
+		align-items: center;
+	}
+	// .cart__mark
+	&__mark {
+		color: $borderColor;
+		transition: color 0.3s;
+		@include adaptiveValue('padding-top', 12, 8, 0, 479.98, 320);
+		@include adaptiveValue('font-size', 20, 18, 0, 479.98, 320);
+		&--active {
+			color: $primaryColor;
+		}
+	}
+	// .cart__items
+	&__items {
+		gap: 30px;
+		display: grid;
+		padding-block: 20px;
+		border-radius: 20px;
+		padding-inline: 15px;
+		margin-inline: -15px;
+		background-color: #f6f8fc;
+		box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+	}
+}
+.item-cart {
+	// .item-cart__main
+	&__main {
+		gap: 10px;
+		display: flex;
+		align-items: start;
+		margin-bottom: 15px;
+		justify-content: space-between;
+	}
+	// .item-cart__content
+	&__content {
+		gap: 10px;
+		display: flex;
+		img {
+			width: 90px;
+			aspect-ratio: 1;
+			object-fit: cover;
+			border-radius: 5px;
+		}
+	}
+	// .item-cart__info
+	&__info {
+		gap: 5px;
+		display: flex;
+		// max-width: 125px;
+		flex-direction: column;
+	}
+	// .item-cart__main-info
+	&__main-info {
+		gap: 5px;
+		display: flex;
+		flex-direction: column;
+	}
+	// .item-cart__below-info
+	&__below-info {
+		font-size: 11px;
+		line-height: 1.2;
+	}
+	// .item-cart__action
+	&__action {
+		display: flex;
+		flex-shrink: 0;
+		font-size: 20px;
+		border-radius: 5px;
+		align-items: center;
+		justify-content: center;
+		&.action-plus {
+			&::before {
+				font-size: 15px;
+				color: #c83838;
+				padding-top: 1.5px;
+				content: 'Вернуть';
+				font-family: $fontRoboto;
+			}
+		}
+	}
+	// .item-cart__below
+	&__below {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		span {
+			font-size: 18px;
+		}
+	}
+}

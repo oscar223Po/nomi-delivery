@@ -1,0 +1,160 @@
+<div data-fls-stamps class="stamps">
+
+	<div class="stamp">
+		<div data-fls-calendar class="stamp__overlay" data-control="calendar"></div>
+		<div class="stamp__wrapper" data-control="calendar">
+			<div class="stamp__decore">
+				<img src="@img/decore/plashka.svg" alt="Decore">
+			</div>
+			<div class="stamp__body calendar">
+				<div class="calendar__content">
+					<h3 class="calendar__title calendar__title--label">Дата</h3>
+					<div data-fls-yearbook class="calendar__yearbook"></div>
+				</div>
+				<button type="button" data-fls-button class="button">Выбрать</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="stamp">
+		<div data-fls-time class="stamp__overlay" data-control="time"></div>
+		<div class="stamp__wrapper" data-control="time">
+			<div class="stamp__decore">
+				<img src="@img/decore/plashka.svg" alt="Decore">
+			</div>
+			<div class="stamp__body time">
+				<div class="time__content">
+					<h3 class="time__title time__title--label">Время</h3>
+					<div class="time__below">
+						<span>с</span>
+						<input data-fls-input data-fls-input-mask="99:99" autocomplete="off" type="text" name="form[]"
+							data-error="Error" placeholder="00:00" class="time__input">
+						<span>до</span>
+						<input data-fls-input data-fls-input-mask="99:99" autocomplete="off" type="text" name="form[]"
+							data-error="Error" placeholder="00:00" class="time__input">
+					</div>
+				</div>
+				<button type="button" data-fls-button class="button">Выбрать</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="stamp">
+		<div data-fls-count class="stamp__overlay" data-control="count"></div>
+		<div class="stamp__wrapper" data-control="count">
+			<div class="stamp__decore">
+				<img src="@img/decore/plashka.svg" alt="Decore">
+			</div>
+			<div class="stamp__body count">
+				<div class="count__content">
+					<h3 class="count__title count__title--label">Количество гостей</h3>
+					<div class="count__items">
+						<button type="button" class="count__item count__item--active">1</button>
+						<button type="button" class="count__item">2</button>
+						<button type="button" class="count__item">3</button>
+						<button type="button" class="count__item">4</button>
+						<button type="button" class="count__item">5</button>
+						<button type="button" class="count__item">6</button>
+						<button type="button" class="count__item">7</button>
+						<button type="button" class="count__item">8</button>
+						<button type="button" class="count__item">9</button>
+						<button type="button" class="count__item">10</button>
+						<button type="button" class="count__item">11</button>
+						<button type="button" class="count__item">12+</button>
+					</div>
+				</div>
+				<button type="button" data-fls-button class="button">Выбрать</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="stamp">
+		<div data-fls-review class="stamp__overlay" data-control="review"></div>
+		<div class="stamp__wrapper" data-control="review">
+			<div class="stamp__decore">
+				<img src="@img/decore/plashka.svg" alt="Decore">
+			</div>
+			<div class="stamp__body review">
+				<div class="review__content">
+					<h3 class="review__title review__title--label">Комментарий к заказу</h3>
+					<textarea data-fls-input autocomplete="off" name="form[]" placeholder="Введите текст сообщения"
+						data-error="Помилка" class="review__textarea input"></textarea>
+				</div>
+				<button type="button" data-fls-button class="button">Сохранить</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="stamp">
+		<div data-fls-card class="stamp__overlay" data-control="card"></div>
+		<div class="stamp__wrapper" data-control="card">
+			<div class="stamp__decore">
+				<img src="@img/decore/plashka.svg" alt="Decore">
+			</div>
+			<div class="stamp__body card">
+				<div class="card__content">
+					<h3 class="card__title card__title--label">Добавление карты</h3>
+					<div class="card__form">
+						<div class="card__label">
+							<span>Номер карты</span>
+							<input data-fls-input required class="input input--data" data-fls-input-mask="9999-9999-9999-9999"
+								autocomplete="off" type="text" name="form[]" data-error="Error"
+								placeholder="0000-0000-0000-0000">
+						</div>
+						<div class="card__addition">
+							<div class="card__label">
+								<span>мм / гг</span>
+								<input data-fls-input required class="input input--data" data-fls-input-mask="99 / 99"
+									autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="00 / 00">
+							</div>
+							<div class="card__label">
+								<span>CVV</span>
+								<input data-fls-input required class="input input--data" data-fls-input-mask="999"
+									autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="000">
+							</div>
+						</div>
+					</div>
+				</div>
+				<button type="button" data-fls-button class="button">Сохранить</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="stamp">
+		<div data-fls-promo class="stamp__overlay" data-control="promo"></div>
+		<div class="stamp__wrapper" data-control="promo">
+			<div class="stamp__decore">
+				<img src="@img/decore/plashka.svg" alt="Decore">
+			</div>
+			<div class="stamp__body promo">
+				<div class="promo__content">
+					<h3 class="promo__title promo__title--label">Введите промокод</h3>
+					<input data-fls-input class="input input--data input--center" autocomplete="off" type="text"
+						name="form[]" data-error="Error" placeholder="Промокод">
+				</div>
+				<button type="button" data-fls-button class="button">Сохранить</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="stamp">
+		<div data-fls-intime class="stamp__overlay" data-control="intime"></div>
+		<div class="stamp__wrapper" data-control="intime">
+			<div class="stamp__decore">
+				<img src="@img/decore/plashka.svg" alt="Decore">
+			</div>
+			<div class="stamp__body time">
+				<div class="time__content">
+					<h3 class="time__title time__title--label">Ко времени</h3>
+					<div class="time__below">
+						<span>Сегодня</span>
+						<input data-fls-input data-fls-input-mask="99:99" autocomplete="off" type="text" name="form[]"
+							data-error="Error" placeholder="00:00" class="time__input">
+					</div>
+				</div>
+				<button type="button" data-fls-button class="button">Выбрать</button>
+			</div>
+		</div>
+	</div>
+
+</div>

@@ -1,0 +1,44 @@
+.header {
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+	position: fixed;
+	padding-block: 30px;
+	transition:
+		padding-block 0.2s,
+		background-color 0.2s;
+	border-radius: 0 0 10px 10px;
+	// .header__body
+	&__body {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	// .header__button
+	&__button {
+		width: 40px;
+		display: flex;
+		color: #fff;
+		aspect-ratio: 1;
+		font-size: 24px;
+		border-radius: 5px;
+		align-items: center;
+		justify-content: center;
+		background-color: rgba($primaryColor, 0.8);
+		box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+		transition:
+			color 0.2s,
+			background-color 0.2s;
+		// .header__button--chat
+		&--chat {
+			&::before {
+				translate: 0 -2px;
+			}
+		}
+		.--header-scroll & {
+			color: $primaryColor;
+			background-color: #fff;
+		}
+	}
+}

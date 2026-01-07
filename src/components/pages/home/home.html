@@ -1,0 +1,507 @@
+<script type="module" src="@components/pages/home/home.js"></script>
+<link rel="stylesheet" href="@components/pages/home/home.scss">
+
+<main class="page page--home">
+	<include src="@components/custom/preview/preview.html"></include>
+	<section class="page__hero hero">
+		<div class="hero__container">
+			<div class="hero__decore">
+				<img src="@img/decore/plashka.svg" alt="Decore">
+			</div>
+			<div class="hero__leader leader-hero">
+				<button type="button" data-fls-info class="leader-hero__label leader-hero__label--title">
+					<h1>Название заведения</h1>
+				</button>
+				<div class="leader-hero__actions">
+					<button type="button" class="leader-hero__action leader-hero__action--active">Самовывоз</button>
+					<button type="button" data-fls-delivery class="leader-hero__action">Доставка</button>
+					<button type="button" data-fls-book class="leader-hero__action">Бронь</button>
+				</div>
+				<button type="button" data-fls-choose class="leader-hero__adres adres-leader adres-leader--icon-arrow">
+					<div class="adres-leader__content adres-leader--icon-location">
+						<div class="adres-leader__inner">
+							<div class="adres-leader__label">ул. Пушкина, д. 12</div>
+							<div class="adres-leader__time">Открыто до 20:00</div>
+						</div>
+					</div>
+				</button>
+			</div>
+			<div class="hero__states">
+				<include src="@components/custom/state/state-time.html"></include>
+				<include src="@components/custom/state/state-success.html"></include>
+				<include src="@components/custom/state/state-fail.html"></include>
+				<include src="@components/custom/state/state-active.html"></include>
+			</div>
+			<div data-fls-tabs class="hero__tabs tabs">
+				<nav data-fls-tabs-titles class="tabs__navigation">
+					<button type="button" class="tabs__title --tab-active">Все</button>
+					<button type="button" class="tabs__title">Завтраки</button>
+					<button type="button" class="tabs__title">Поке, боулы</button>
+				</nav>
+				<div data-fls-tabs-body class="tabs__content">
+					<div class="tabs__body">
+						<div class="tabs__block">
+							<h2 class="tabs__label-block">Завтраки</h2>
+							<div class="tabs__items">
+								<div data-fls-portion class="tabs__portion portion">
+									<div class="portion__labels">
+										<span>Хит</span>
+										<span>Советуем</span>
+										<span>Новинка</span>
+									</div>
+									<div class="portion__body">
+										<figure class="portion__image">
+											<img src="@img/portion/01.jpg" alt="Image">
+										</figure>
+										<div class="portion__content">
+											<div class="portion__info">
+												<span>Глазунья с сосиской и картофелем фри</span>
+												<span>385 ₽</span>
+											</div>
+											<div class="portion__action">
+												<button type="button" class="portion__button">Добавить</button>
+												<div data-fls-quantity-prt class="portion__quantity quantity-portion quantity-portion--hidden">
+													<button data-fls-quantity-minus-prt type="button"
+														class="quantity-portion__button quantity-portion__button--minus"></button>
+													<div class="quantity-portion__input">
+														<input data-fls-quantity-value-prt autocomplete="off" type="text" name="form[]"
+															value="0">
+													</div>
+													<button data-fls-quantity-plus-prt type="button"
+														class="quantity-portion__button quantity-portion__button--plus"></button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div data-fls-portion class="tabs__portion portion">
+									<div class="portion__labels">
+										<span>Акция</span>
+									</div>
+									<div class="portion__body">
+										<figure class="portion__image">
+											<img src="@img/portion/02.jpg" alt="Image">
+										</figure>
+										<div class="portion__content">
+											<div class="portion__info">
+												<span>Глазунья с беконом</span>
+												<span>385 ₽</span>
+											</div>
+											<div class="portion__action">
+												<button type="button" class="portion__button">Добавить</button>
+												<div data-fls-quantity-prt class="portion__quantity quantity-portion quantity-portion--hidden">
+													<button data-fls-quantity-minus-prt type="button"
+														class="quantity-portion__button quantity-portion__button--minus"></button>
+													<div class="quantity-portion__input">
+														<input data-fls-quantity-value-prt autocomplete="off" type="text" name="form[]"
+															value="0">
+													</div>
+													<button data-fls-quantity-plus-prt type="button"
+														class="quantity-portion__button quantity-portion__button--plus"></button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div data-fls-portion class="tabs__portion portion">
+									<div class="portion__body">
+										<figure class="portion__image">
+											<img src="@img/portion/03.jpg" alt="Image">
+										</figure>
+										<div class="portion__content">
+											<div class="portion__info">
+												<span>Панкейки с ванильным муссом</span>
+												<span>385 ₽</span>
+											</div>
+											<div class="portion__action">
+												<button type="button" class="portion__button">Добавить</button>
+												<div data-fls-quantity-prt class="portion__quantity quantity-portion quantity-portion--hidden">
+													<button data-fls-quantity-minus-prt type="button"
+														class="quantity-portion__button quantity-portion__button--minus"></button>
+													<div class="quantity-portion__input">
+														<input data-fls-quantity-value-prt autocomplete="off" type="text" name="form[]"
+															value="0">
+													</div>
+													<button data-fls-quantity-plus-prt type="button"
+														class="quantity-portion__button quantity-portion__button--plus"></button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div data-fls-portion class="tabs__portion portion">
+									<div class="portion__body">
+										<figure class="portion__image">
+											<img src="@img/portion/04.jpg" alt="Image">
+										</figure>
+										<div class="portion__content">
+											<div class="portion__info">
+												<span>Сэндвич с ростбифом и картофелем фри</span>
+												<span>385 ₽</span>
+											</div>
+											<div class="portion__action">
+												<button type="button" class="portion__button">Добавить</button>
+												<div data-fls-quantity-prt class="portion__quantity quantity-portion quantity-portion--hidden">
+													<button data-fls-quantity-minus-prt type="button"
+														class="quantity-portion__button quantity-portion__button--minus"></button>
+													<div class="quantity-portion__input">
+														<input data-fls-quantity-value-prt autocomplete="off" type="text" name="form[]"
+															value="0">
+													</div>
+													<button data-fls-quantity-plus-prt type="button"
+														class="quantity-portion__button quantity-portion__button--plus"></button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tabs__block">
+							<h2 class="tabs__label-block">Поке, боулы</h2>
+							<div class="tabs__items">
+								<div data-fls-portion class="tabs__portion portion">
+									<div class="portion__body">
+										<figure class="portion__image">
+											<img src="@img/portion/01.jpg" alt="Image">
+										</figure>
+										<div class="portion__content">
+											<div class="portion__info">
+												<span>Глазунья с сосиской и картофелем фри</span>
+												<span>385 ₽</span>
+											</div>
+											<div class="portion__action">
+												<button type="button" class="portion__button">Добавить</button>
+												<div data-fls-quantity-prt class="portion__quantity quantity-portion quantity-portion--hidden">
+													<button data-fls-quantity-minus-prt type="button"
+														class="quantity-portion__button quantity-portion__button--minus"></button>
+													<div class="quantity-portion__input">
+														<input data-fls-quantity-value-prt autocomplete="off" type="text" name="form[]"
+															value="0">
+													</div>
+													<button data-fls-quantity-plus-prt type="button"
+														class="quantity-portion__button quantity-portion__button--plus"></button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div data-fls-portion class="tabs__portion portion">
+									<div class="portion__body">
+										<figure class="portion__image">
+											<img src="@img/portion/02.jpg" alt="Image">
+										</figure>
+										<div class="portion__content">
+											<div class="portion__info">
+												<span>Глазунья с беконом</span>
+												<span>385 ₽</span>
+											</div>
+											<div class="portion__action">
+												<button type="button" class="portion__button">Добавить</button>
+												<div data-fls-quantity-prt class="portion__quantity quantity-portion quantity-portion--hidden">
+													<button data-fls-quantity-minus-prt type="button"
+														class="quantity-portion__button quantity-portion__button--minus"></button>
+													<div class="quantity-portion__input">
+														<input data-fls-quantity-value-prt autocomplete="off" type="text" name="form[]"
+															value="0">
+													</div>
+													<button data-fls-quantity-plus-prt type="button"
+														class="quantity-portion__button quantity-portion__button--plus"></button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div data-fls-portion class="tabs__portion portion">
+									<div class="portion__body">
+										<figure class="portion__image">
+											<img src="@img/portion/03.jpg" alt="Image">
+										</figure>
+										<div class="portion__content">
+											<div class="portion__info">
+												<span>Панкейки с ванильным муссом</span>
+												<span>385 ₽</span>
+											</div>
+											<div class="portion__action">
+												<button type="button" class="portion__button">Добавить</button>
+												<div data-fls-quantity-prt class="portion__quantity quantity-portion quantity-portion--hidden">
+													<button data-fls-quantity-minus-prt type="button"
+														class="quantity-portion__button quantity-portion__button--minus"></button>
+													<div class="quantity-portion__input">
+														<input data-fls-quantity-value-prt autocomplete="off" type="text" name="form[]"
+															value="0">
+													</div>
+													<button data-fls-quantity-plus-prt type="button"
+														class="quantity-portion__button quantity-portion__button--plus"></button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div data-fls-portion class="tabs__portion portion">
+									<div class="portion__body">
+										<figure class="portion__image">
+											<img src="@img/portion/04.jpg" alt="Image">
+										</figure>
+										<div class="portion__content">
+											<div class="portion__info">
+												<span>Сэндвич с ростбифом и картофелем фри</span>
+												<span>385 ₽</span>
+											</div>
+											<div class="portion__action">
+												<button type="button" class="portion__button">Добавить</button>
+												<div data-fls-quantity-prt class="portion__quantity quantity-portion quantity-portion--hidden">
+													<button data-fls-quantity-minus-prt type="button"
+														class="quantity-portion__button quantity-portion__button--minus"></button>
+													<div class="quantity-portion__input">
+														<input data-fls-quantity-value-prt autocomplete="off" type="text" name="form[]"
+															value="0">
+													</div>
+													<button data-fls-quantity-plus-prt type="button"
+														class="quantity-portion__button quantity-portion__button--plus"></button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tabs__body">
+						<div class="tabs__block">
+							<h2 class="tabs__label-block">Завтраки</h2>
+							<div class="tabs__items">
+								<div data-fls-portion class="tabs__portion portion">
+									<div class="portion__labels">
+										<span>Хит</span>
+										<span>Советуем</span>
+										<span>Новинка</span>
+									</div>
+									<div class="portion__body">
+										<figure class="portion__image">
+											<img src="@img/portion/01.jpg" alt="Image">
+										</figure>
+										<div class="portion__content">
+											<div class="portion__info">
+												<span>Глазунья с сосиской и картофелем фри</span>
+												<span>385 ₽</span>
+											</div>
+											<div class="portion__action">
+												<button type="button" class="portion__button">Добавить</button>
+												<div data-fls-quantity-prt class="portion__quantity quantity-portion quantity-portion--hidden">
+													<button data-fls-quantity-minus-prt type="button"
+														class="quantity-portion__button quantity-portion__button--minus"></button>
+													<div class="quantity-portion__input">
+														<input data-fls-quantity-value-prt autocomplete="off" type="text" name="form[]"
+															value="0">
+													</div>
+													<button data-fls-quantity-plus-prt type="button"
+														class="quantity-portion__button quantity-portion__button--plus"></button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div data-fls-portion class="tabs__portion portion">
+									<div class="portion__labels">
+										<span>Акция</span>
+									</div>
+									<div class="portion__body">
+										<figure class="portion__image">
+											<img src="@img/portion/02.jpg" alt="Image">
+										</figure>
+										<div class="portion__content">
+											<div class="portion__info">
+												<span>Глазунья с беконом</span>
+												<span>385 ₽</span>
+											</div>
+											<div class="portion__action">
+												<button type="button" class="portion__button">Добавить</button>
+												<div data-fls-quantity-prt class="portion__quantity quantity-portion quantity-portion--hidden">
+													<button data-fls-quantity-minus-prt type="button"
+														class="quantity-portion__button quantity-portion__button--minus"></button>
+													<div class="quantity-portion__input">
+														<input data-fls-quantity-value-prt autocomplete="off" type="text" name="form[]"
+															value="0">
+													</div>
+													<button data-fls-quantity-plus-prt type="button"
+														class="quantity-portion__button quantity-portion__button--plus"></button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div data-fls-portion class="tabs__portion portion">
+									<div class="portion__body">
+										<figure class="portion__image">
+											<img src="@img/portion/03.jpg" alt="Image">
+										</figure>
+										<div class="portion__content">
+											<div class="portion__info">
+												<span>Панкейки с ванильным муссом</span>
+												<span>385 ₽</span>
+											</div>
+											<div class="portion__action">
+												<button type="button" class="portion__button">Добавить</button>
+												<div data-fls-quantity-prt class="portion__quantity quantity-portion quantity-portion--hidden">
+													<button data-fls-quantity-minus-prt type="button"
+														class="quantity-portion__button quantity-portion__button--minus"></button>
+													<div class="quantity-portion__input">
+														<input data-fls-quantity-value-prt autocomplete="off" type="text" name="form[]"
+															value="0">
+													</div>
+													<button data-fls-quantity-plus-prt type="button"
+														class="quantity-portion__button quantity-portion__button--plus"></button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div data-fls-portion class="tabs__portion portion">
+									<div class="portion__body">
+										<figure class="portion__image">
+											<img src="@img/portion/04.jpg" alt="Image">
+										</figure>
+										<div class="portion__content">
+											<div class="portion__info">
+												<span>Сэндвич с ростбифом и картофелем фри</span>
+												<span>385 ₽</span>
+											</div>
+											<div class="portion__action">
+												<button type="button" class="portion__button">Добавить</button>
+												<div data-fls-quantity-prt class="portion__quantity quantity-portion quantity-portion--hidden">
+													<button data-fls-quantity-minus-prt type="button"
+														class="quantity-portion__button quantity-portion__button--minus"></button>
+													<div class="quantity-portion__input">
+														<input data-fls-quantity-value-prt autocomplete="off" type="text" name="form[]"
+															value="0">
+													</div>
+													<button data-fls-quantity-plus-prt type="button"
+														class="quantity-portion__button quantity-portion__button--plus"></button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tabs__body">
+						<div class="tabs__block">
+							<h2 class="tabs__label-block">Поке, боулы</h2>
+							<div class="tabs__items">
+								<div data-fls-portion class="tabs__portion portion">
+									<div class="portion__body">
+										<figure class="portion__image">
+											<img src="@img/portion/01.jpg" alt="Image">
+										</figure>
+										<div class="portion__content">
+											<div class="portion__info">
+												<span>Глазунья с сосиской и картофелем фри</span>
+												<span>385 ₽</span>
+											</div>
+											<div class="portion__action">
+												<button type="button" class="portion__button">Добавить</button>
+												<div data-fls-quantity-prt class="portion__quantity quantity-portion quantity-portion--hidden">
+													<button data-fls-quantity-minus-prt type="button"
+														class="quantity-portion__button quantity-portion__button--minus"></button>
+													<div class="quantity-portion__input">
+														<input data-fls-quantity-value-prt autocomplete="off" type="text" name="form[]"
+															value="0">
+													</div>
+													<button data-fls-quantity-plus-prt type="button"
+														class="quantity-portion__button quantity-portion__button--plus"></button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div data-fls-portion class="tabs__portion portion">
+									<div class="portion__body">
+										<figure class="portion__image">
+											<img src="@img/portion/02.jpg" alt="Image">
+										</figure>
+										<div class="portion__content">
+											<div class="portion__info">
+												<span>Глазунья с беконом</span>
+												<span>385 ₽</span>
+											</div>
+											<div class="portion__action">
+												<button type="button" class="portion__button">Добавить</button>
+												<div data-fls-quantity-prt class="portion__quantity quantity-portion quantity-portion--hidden">
+													<button data-fls-quantity-minus-prt type="button"
+														class="quantity-portion__button quantity-portion__button--minus"></button>
+													<div class="quantity-portion__input">
+														<input data-fls-quantity-value-prt autocomplete="off" type="text" name="form[]"
+															value="0">
+													</div>
+													<button data-fls-quantity-plus-prt type="button"
+														class="quantity-portion__button quantity-portion__button--plus"></button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div data-fls-portion class="tabs__portion portion">
+									<div class="portion__body">
+										<figure class="portion__image">
+											<img src="@img/portion/03.jpg" alt="Image">
+										</figure>
+										<div class="portion__content">
+											<div class="portion__info">
+												<span>Панкейки с ванильным муссом</span>
+												<span>385 ₽</span>
+											</div>
+											<div class="portion__action">
+												<button type="button" class="portion__button">Добавить</button>
+												<div data-fls-quantity-prt class="portion__quantity quantity-portion quantity-portion--hidden">
+													<button data-fls-quantity-minus-prt type="button"
+														class="quantity-portion__button quantity-portion__button--minus"></button>
+													<div class="quantity-portion__input">
+														<input data-fls-quantity-value-prt autocomplete="off" type="text" name="form[]"
+															value="0">
+													</div>
+													<button data-fls-quantity-plus-prt type="button"
+														class="quantity-portion__button quantity-portion__button--plus"></button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div data-fls-portion class="tabs__portion portion">
+									<div class="portion__body">
+										<figure class="portion__image">
+											<img src="@img/portion/04.jpg" alt="Image">
+										</figure>
+										<div class="portion__content">
+											<div class="portion__info">
+												<span>Сэндвич с ростбифом и картофелем фри</span>
+												<span>385 ₽</span>
+											</div>
+											<div class="portion__action">
+												<button type="button" class="portion__button">Добавить</button>
+												<div data-fls-quantity-prt class="portion__quantity quantity-portion quantity-portion--hidden">
+													<button data-fls-quantity-minus-prt type="button"
+														class="quantity-portion__button quantity-portion__button--minus"></button>
+													<div class="quantity-portion__input">
+														<input data-fls-quantity-value-prt autocomplete="off" type="text" name="form[]"
+															value="0">
+													</div>
+													<button data-fls-quantity-plus-prt type="button"
+														class="quantity-portion__button quantity-portion__button--plus"></button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<include src="@components/custom/controls/controls.html"></include>
+	<include src="@components/layout/info/info.html"></include>
+	<include src="@components/layout/blank/blank.html"></include>
+</main>

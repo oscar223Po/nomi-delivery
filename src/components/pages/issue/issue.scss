@@ -1,0 +1,128 @@
+.page {
+	// .page--issue
+	&--issue {
+		padding-bottom: 150px;
+	}
+	// .page__issue
+	&__issue {
+	}
+}
+.issue {
+	::-webkit-scrollbar {
+		display: none;
+	}
+	// .issue__head
+	&__head {
+		top: 0;
+		left: 0;
+		gap: 10px;
+		z-index: 1;
+		display: flex;
+		flex-wrap: wrap;
+		position: sticky;
+		padding-block: 15px;
+		align-items: center;
+		margin-bottom: 25px;
+		padding-inline: 15px;
+		margin-inline: -15px;
+		background-color: #fff;
+		justify-content: space-between;
+	}
+	// .issue__close
+	&__close {
+		&::before {
+			rotate: 180deg;
+		}
+	}
+	// .issue__body
+	&__body {
+		gap: 20px;
+		display: grid;
+		margin-inline: -15px;
+	}
+	// .issue__subtitle
+	&__subtitle {
+		font-size: 18px;
+		font-weight: 700;
+	}
+	// .issue__block
+	&__block {
+		display: grid;
+		padding-block: 20px;
+		border-radius: 20px;
+		padding-inline: 15px;
+		background-color: #f6f8fc;
+		box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+	}
+	// .issue__time
+	// .issue__metod
+	&__time,
+	&__metod {
+		padding-block: 20px;
+	}
+	// .issue__button
+	&__button {
+		gap: 6px;
+		overflow: hidden;
+		text-align: left;
+		display: inline-flex;
+		span {
+			align-self: center;
+			padding-bottom: 2px;
+			word-break: break-all;
+		}
+		svg {
+			flex-shrink: 0;
+			translate: 0 1px;
+		}
+	}
+}
+.time-issue {
+	gap: 12px;
+	display: flex;
+	align-items: center;
+	// .time-issue__button
+	&__button {
+		height: 54px;
+		border-radius: 5px;
+		padding-inline: 10px;
+		font-family: $fontRoboto;
+		background-color: $muteColor;
+		transition:
+			color 0.3s,
+			background-color 0.3s;
+		box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+		&--active {
+			color: #fff;
+			font-weight: 700;
+			background-color: $primaryColor;
+		}
+	}
+}
+.metod-issue {
+	gap: 12px;
+	display: flex;
+	overflow: auto;
+	white-space: nowrap;
+	align-items: center;
+	padding-inline: 15px;
+	margin-inline: -15px;
+	// .metod-issue__button
+	&__button {
+		height: 54px;
+		min-width: 94px;
+		border-radius: 5px;
+		padding-inline: 10px;
+		font-family: $fontRoboto;
+		background-color: $muteColor;
+		transition:
+			color 0.3s,
+			background-color 0.3s;
+		box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+		&--active {
+			color: #fff;
+			font-weight: 700;
+			background-color: $primaryColor;
+		}
+	}
+}

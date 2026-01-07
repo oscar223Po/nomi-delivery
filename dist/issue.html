@@ -1,0 +1,589 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="./assets/img/shortcut.svg">
+		<title>Nomi (Making an order)</title>
+		<script type="module" crossorigin="" src="./js/issue.min.js?v=1767804351958"></script>
+		<link rel="modulepreload" crossorigin="" href="./js/app.min.js">
+		<link rel="modulepreload" crossorigin="" href="./js/controls.min.js">
+		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1767804351958">
+		<link rel="stylesheet" crossorigin="" href="./css/controls.min.css?v=1767804351958">
+		<link rel="stylesheet" crossorigin="" href="./css/issue.min.css?v=1767804351958">
+		<link rel="stylesheet" crossorigin="" href="./css/total.min.css?v=1767804351958">
+	</head>
+	<body>
+		<div class="wrapper">
+			<main class="page page--issue">
+				<section class="page__issue issue">
+					<div class="issue__container">
+						<div class="issue__head">
+							<button type="button" data-fls-button="" class="issue__close issue__close--icon-arrow button-box"></button>
+							<h1 class="issue__title issue__title--title">Оформление</h1>
+						</div>
+						<div class="issue__body">
+							<div class="issue__block">
+								<h2 class="issue__subtitle">Время</h2>
+								<div class="issue__time time-issue">
+									<button type="button" class="time-issue__button time-issue__button--active">Побыстрее</button>
+									<button type="button" data-fls-intime="" class="time-issue__button">Ко времени</button>
+								</div>
+								<button type="button" data-fls-review="" class="issue__button button-issue-review">
+									<svg width="22" height="22" viewbox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M18.1238 0H3.87619C2.84844 0.000924668 1.86306 0.409613 1.13633 1.13635C0.409605 1.8631 0.000924648 2.8485 0 3.87627L0 14.6321C0.000924648 15.6598 0.409605 16.6452 1.13633 17.372C1.86306 18.0987 2.84844 18.5074 3.87619 18.5083H6.98413V21.4766C6.98422 21.5802 7.01499 21.6814 7.07255 21.7674C7.13012 21.8535 7.21189 21.9205 7.30755 21.9602C7.4032 21.9998 7.50845 22.0101 7.61 21.99C7.71155 21.9698 7.80484 21.92 7.8781 21.8468L11.2165 18.5083H18.1238C19.1516 18.5074 20.1369 18.0987 20.8637 17.372C21.5904 16.6452 21.9991 15.6598 22 14.6321V3.87627C21.9991 2.8485 21.5904 1.8631 20.8637 1.13635C20.1369 0.409613 19.1516 0.000924668 18.1238 0ZM5.7619 10.197C5.57444 10.1977 5.39099 10.1427 5.23483 10.039C5.07867 9.93528 4.95683 9.78751 4.88478 9.61445C4.81272 9.44138 4.79368 9.25081 4.83008 9.0669C4.86649 8.883 4.95669 8.71405 5.08925 8.58149C5.22181 8.44893 5.39075 8.35873 5.57465 8.32232C5.75855 8.28592 5.94912 8.30495 6.12218 8.37701C6.29525 8.44907 6.44301 8.57091 6.54673 8.72708C6.65045 8.88324 6.70545 9.06669 6.70476 9.25416C6.70384 9.50395 6.60421 9.74324 6.42759 9.91986C6.25097 10.0965 6.01168 10.1961 5.7619 10.197ZM11 10.197C10.8125 10.1977 10.6291 10.1427 10.4729 10.039C10.3168 9.93528 10.1949 9.78751 10.1229 9.61445C10.0508 9.44138 10.0318 9.25081 10.0682 9.0669C10.1046 8.883 10.1948 8.71405 10.3273 8.58149C10.4599 8.44893 10.6288 8.35873 10.8127 8.32232C10.9966 8.28592 11.1872 8.30495 11.3603 8.37701C11.5333 8.44907 11.6811 8.57091 11.7848 8.72708C11.8885 8.88324 11.9435 9.06669 11.9429 9.25416C11.9419 9.50395 11.8423 9.74324 11.6657 9.91986C11.4891 10.0965 11.2498 10.1961 11 10.197ZM16.2381 10.197C16.0506 10.1977 15.8672 10.1427 15.711 10.039C15.5549 9.93528 15.433 9.78751 15.361 9.61445C15.2889 9.44138 15.2699 9.25081 15.3063 9.0669C15.3427 8.883 15.4329 8.71405 15.5654 8.58149C15.698 8.44893 15.8669 8.35873 16.0508 8.32232C16.2347 8.28592 16.4253 8.30495 16.5984 8.37701C16.7714 8.44907 16.9192 8.57091 17.0229 8.72708C17.1266 8.88324 17.1816 9.06669 17.181 9.25416C17.18 9.50395 17.0804 9.74324 16.9038 9.91986C16.7272 10.0965 16.4879 10.1961 16.2381 10.197Z" fill="#D9D9D9"></path>
+										<path d="M18.1238 0H3.87619C2.84844 0.000924668 1.86306 0.409613 1.13633 1.13635C0.409605 1.8631 0.000924648 2.8485 0 3.87627L0 14.6321C0.000924648 15.6598 0.409605 16.6452 1.13633 17.372C1.86306 18.0987 2.84844 18.5074 3.87619 18.5083H6.98413V21.4766C6.98422 21.5802 7.01499 21.6814 7.07255 21.7674C7.13012 21.8535 7.21189 21.9205 7.30755 21.9602C7.4032 21.9998 7.50845 22.0101 7.61 21.99C7.71155 21.9698 7.80484 21.92 7.8781 21.8468L11.2165 18.5083H18.1238C19.1516 18.5074 20.1369 18.0987 20.8637 17.372C21.5904 16.6452 21.9991 15.6598 22 14.6321V3.87627C21.9991 2.8485 21.5904 1.8631 20.8637 1.13635C20.1369 0.409613 19.1516 0.000924668 18.1238 0ZM5.7619 10.197C5.57444 10.1977 5.39099 10.1427 5.23483 10.039C5.07867 9.93528 4.95683 9.78751 4.88478 9.61445C4.81272 9.44138 4.79368 9.25081 4.83008 9.0669C4.86649 8.883 4.95669 8.71405 5.08925 8.58149C5.22181 8.44893 5.39075 8.35873 5.57465 8.32232C5.75855 8.28592 5.94912 8.30495 6.12218 8.37701C6.29525 8.44907 6.44301 8.57091 6.54673 8.72708C6.65045 8.88324 6.70545 9.06669 6.70476 9.25416C6.70384 9.50395 6.60421 9.74324 6.42759 9.91986C6.25097 10.0965 6.01168 10.1961 5.7619 10.197ZM11 10.197C10.8125 10.1977 10.6291 10.1427 10.4729 10.039C10.3168 9.93528 10.1949 9.78751 10.1229 9.61445C10.0508 9.44138 10.0318 9.25081 10.0682 9.0669C10.1046 8.883 10.1948 8.71405 10.3273 8.58149C10.4599 8.44893 10.6288 8.35873 10.8127 8.32232C10.9966 8.28592 11.1872 8.30495 11.3603 8.37701C11.5333 8.44907 11.6811 8.57091 11.7848 8.72708C11.8885 8.88324 11.9435 9.06669 11.9429 9.25416C11.9419 9.50395 11.8423 9.74324 11.6657 9.91986C11.4891 10.0965 11.2498 10.1961 11 10.197ZM16.2381 10.197C16.0506 10.1977 15.8672 10.1427 15.711 10.039C15.5549 9.93528 15.433 9.78751 15.361 9.61445C15.2889 9.44138 15.2699 9.25081 15.3063 9.0669C15.3427 8.883 15.4329 8.71405 15.5654 8.58149C15.698 8.44893 15.8669 8.35873 16.0508 8.32232C16.2347 8.28592 16.4253 8.30495 16.5984 8.37701C16.7714 8.44907 16.9192 8.57091 17.0229 8.72708C17.1266 8.88324 17.1816 9.06669 17.181 9.25416C17.18 9.50395 17.0804 9.74324 16.9038 9.91986C16.7272 10.0965 16.4879 10.1961 16.2381 10.197Z" fill="#6F9AFA"></path>
+									</svg>
+									<span>Комментарий ресторану</span>
+								</button>
+							</div>
+							<div class="issue__block">
+								<h2 class="issue__title">Способ оплаты</h2>
+								<div class="issue__metod metod-issue">
+									<button type="button" class="metod-issue__button metod-issue__button--active">** 0000</button>
+									<button type="button" class="metod-issue__button">** 1111</button>
+									<button type="button" class="metod-issue__button">СБП</button>
+									<button type="button" data-fls-card="" class="metod-issue__button">Добавить</button>
+								</div>
+								<button type="button" data-fls-promo="" class="issue__button button-issue-promo">
+									<svg width="22" height="22" viewbox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g clip-path="url(#clip0_1_1541)">
+											<path d="M21.9787 8.45998L21.2332 2.49524C21.1777 2.06698 20.9826 1.66899 20.6783 1.3629C20.374 1.05681 19.9773 0.859704 19.5497 0.802105L13.5934 0.0210718C13.1302 -0.0343341 12.6604 0.0150049 12.2188 0.165454C11.7771 0.315902 11.3748 0.563626 11.0415 0.890373L0.601331 11.2899C0.408392 11.4827 0.255835 11.7122 0.152596 11.9648C0.0493563 12.2174 -0.0024904 12.4881 9.19276e-05 12.761C0.0103448 13.3103 0.233624 13.834 0.622708 14.2214L7.72534 21.3764C7.92096 21.5738 8.15365 21.7305 8.41001 21.8374C8.66638 21.9444 8.94135 21.9995 9.21909 21.9997C9.75557 22.0012 10.2714 21.7929 10.6567 21.4192L21.0782 11.0224C21.4128 10.6921 21.6673 10.2893 21.822 9.84504C21.9767 9.40081 22.0276 8.92697 21.9707 8.45998H21.9787ZM11.8592 8.31286C11.8597 8.66583 11.7556 9.01103 11.5601 9.30477C11.3646 9.59851 11.0864 9.8276 10.7608 9.96304C10.4351 10.0985 10.0767 10.1342 9.73078 10.0657C9.38486 9.99712 9.06703 9.82742 8.8175 9.57802C8.56797 9.32862 8.39795 9.01073 8.32896 8.66458C8.25997 8.31843 8.29511 7.95958 8.42993 7.63342C8.56476 7.30727 8.7932 7.02848 9.08636 6.83232C9.37953 6.63617 9.72423 6.53147 10.0769 6.53147C10.5491 6.53147 11.002 6.71906 11.3362 7.05306C11.6704 7.38706 11.8585 7.84016 11.8592 8.31286ZM6.73664 10.8218H13.4171C13.6304 10.8339 13.831 10.9272 13.9777 11.0826C14.1244 11.2381 14.2062 11.4438 14.2062 11.6577C14.2062 11.8715 14.1244 12.0773 13.9777 12.2327C13.831 12.3881 13.6304 12.4815 13.4171 12.4935H6.73664C6.623 12.5 6.50925 12.4831 6.40235 12.444C6.29545 12.4049 6.19764 12.3444 6.11492 12.2662C6.03219 12.1879 5.9663 12.0936 5.92126 11.9889C5.87622 11.8843 5.85299 11.7716 5.85299 11.6577C5.85299 11.5437 5.87622 11.431 5.92126 11.3264C5.9663 11.2218 6.03219 11.1274 6.11492 11.0492C6.19764 10.9709 6.29545 10.9104 6.40235 10.8713C6.50925 10.8322 6.623 10.8154 6.73664 10.8218ZM18.1709 6.11955C18.0936 6.19727 18.0018 6.25894 17.9007 6.30103C17.7996 6.34311 17.6912 6.36478 17.5817 6.36478C17.4721 6.36478 17.3637 6.34311 17.2626 6.30103C17.1615 6.25894 17.0697 6.19727 16.9924 6.11955L15.3651 4.41305C15.2462 4.35477 15.1429 4.2691 15.0636 4.16307C14.9843 4.05704 14.9312 3.93368 14.9088 3.80313C14.8863 3.67259 14.8952 3.53857 14.9345 3.41211C14.9739 3.28564 15.0427 3.17034 15.1353 3.07566C15.2301 2.9815 15.346 2.91129 15.4733 2.87083C15.6006 2.83036 15.7357 2.82081 15.8675 2.84296C15.9987 2.86541 16.1226 2.91918 16.2286 2.99973C16.3347 3.08028 16.4198 3.18523 16.4767 3.30569L18.1468 4.97742C18.2984 5.12837 18.3864 5.33168 18.3929 5.54558C18.3993 5.75948 18.3237 5.96774 18.1816 6.12758L18.1709 6.11955ZM8.28383 15.0346C8.28842 15.5168 8.48363 15.9777 8.82676 16.3163C9.1699 16.6549 9.63303 16.8437 10.1149 16.8414C10.5967 16.8391 11.058 16.6459 11.3979 16.304C11.7378 15.9622 11.9286 15.4995 11.9286 15.0172C11.9286 14.5349 11.7378 14.0722 11.3979 13.7304C11.058 13.3885 10.5967 13.1953 10.1149 13.193C9.63303 13.1907 9.1699 13.3795 8.82676 13.7181C8.48363 14.0567 8.28842 14.5175 8.28383 14.9998V15.0346Z" fill="#6F9AFA"></path>
+											<path d="M10.0189 10.1587C11.0357 10.1587 11.86 9.33363 11.86 8.31582C11.86 7.298 11.0357 6.4729 10.0189 6.4729C9.00204 6.4729 8.17773 7.298 8.17773 8.31582C8.17773 9.33363 9.00204 10.1587 10.0189 10.1587Z" fill="white"></path>
+											<path d="M10.0775 16.8779C11.0943 16.8779 11.9186 16.0527 11.9186 15.0349C11.9186 14.0171 11.0943 13.192 10.0775 13.192C9.06063 13.192 8.23633 14.0171 8.23633 15.0349C8.23633 16.0527 9.06063 16.8779 10.0775 16.8779Z" fill="white"></path>
+											<path d="M10.5229 15.0001C10.5223 14.912 10.4957 14.8261 10.4465 14.7532C10.3972 14.6802 10.3275 14.6234 10.2462 14.59C10.1648 14.5565 10.0754 14.5479 9.9891 14.5652C9.90285 14.5825 9.82362 14.6249 9.76137 14.6871C9.69897 14.749 9.65647 14.8282 9.63933 14.9145C9.62219 15.0007 9.63119 15.0902 9.66517 15.1713C9.70499 15.2663 9.77639 15.3446 9.86729 15.3929C9.95819 15.4413 10.063 15.4567 10.1639 15.4365C10.2649 15.4164 10.3558 15.3619 10.4212 15.2824C10.4866 15.2029 10.5226 15.1031 10.5229 15.0001Z" fill="black"></path>
+											<path d="M9.61915 8.31317C9.61842 8.41663 9.6536 8.51713 9.71867 8.59752C9.78374 8.67791 9.87467 8.7332 9.97594 8.75394C10.0772 8.77468 10.1825 8.75959 10.2739 8.71124C10.3653 8.6629 10.4371 8.5843 10.477 8.48887C10.5169 8.39344 10.5225 8.28709 10.4928 8.18799C10.4631 8.08888 10.4 8.00317 10.3142 7.94549C10.2284 7.88781 10.1252 7.86173 10.0223 7.87171C9.91946 7.88169 9.82323 7.92711 9.75009 8.00022C9.70835 8.04088 9.67525 8.08956 9.65275 8.14333C9.63025 8.1971 9.61882 8.25487 9.61915 8.31317Z" fill="black"></path>
+										</g>
+										<defs>
+											<clipPath id="clip0_1_1541">
+												<rect width="22" height="22" fill="white"></rect>
+											</clipPath>
+										</defs>
+									</svg>
+									<span>Ввести промокод</span>
+								</button>
+							</div>
+						</div>
+						<div data-fls-stamps="" class="stamps">
+							<div class="stamp">
+								<div data-fls-calendar="" class="stamp__overlay" data-control="calendar"></div>
+								<div class="stamp__wrapper" data-control="calendar">
+									<div class="stamp__decore">
+										<img src="./assets/img/decore/plashka.svg" alt="Decore">
+									</div>
+									<div class="stamp__body calendar">
+										<div class="calendar__content">
+											<h3 class="calendar__title calendar__title--label">Дата</h3>
+											<div data-fls-yearbook="" class="calendar__yearbook"></div>
+										</div>
+										<button type="button" data-fls-button="" class="button">Выбрать</button>
+									</div>
+								</div>
+							</div>
+							<div class="stamp">
+								<div data-fls-time="" class="stamp__overlay" data-control="time"></div>
+								<div class="stamp__wrapper" data-control="time">
+									<div class="stamp__decore">
+										<img src="./assets/img/decore/plashka.svg" alt="Decore">
+									</div>
+									<div class="stamp__body time">
+										<div class="time__content">
+											<h3 class="time__title time__title--label">Время</h3>
+											<div class="time__below">
+												<span>с</span>
+												<input data-fls-input="" data-fls-input-mask="99:99" autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="00:00" class="time__input">
+												<span>до</span>
+												<input data-fls-input="" data-fls-input-mask="99:99" autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="00:00" class="time__input">
+											</div>
+										</div>
+										<button type="button" data-fls-button="" class="button">Выбрать</button>
+									</div>
+								</div>
+							</div>
+							<div class="stamp">
+								<div data-fls-count="" class="stamp__overlay" data-control="count"></div>
+								<div class="stamp__wrapper" data-control="count">
+									<div class="stamp__decore">
+										<img src="./assets/img/decore/plashka.svg" alt="Decore">
+									</div>
+									<div class="stamp__body count">
+										<div class="count__content">
+											<h3 class="count__title count__title--label">Количество гостей</h3>
+											<div class="count__items">
+												<button type="button" class="count__item count__item--active">1</button>
+												<button type="button" class="count__item">2</button>
+												<button type="button" class="count__item">3</button>
+												<button type="button" class="count__item">4</button>
+												<button type="button" class="count__item">5</button>
+												<button type="button" class="count__item">6</button>
+												<button type="button" class="count__item">7</button>
+												<button type="button" class="count__item">8</button>
+												<button type="button" class="count__item">9</button>
+												<button type="button" class="count__item">10</button>
+												<button type="button" class="count__item">11</button>
+												<button type="button" class="count__item">12+</button>
+											</div>
+										</div>
+										<button type="button" data-fls-button="" class="button">Выбрать</button>
+									</div>
+								</div>
+							</div>
+							<div class="stamp">
+								<div data-fls-review="" class="stamp__overlay" data-control="review"></div>
+								<div class="stamp__wrapper" data-control="review">
+									<div class="stamp__decore">
+										<img src="./assets/img/decore/plashka.svg" alt="Decore">
+									</div>
+									<div class="stamp__body review">
+										<div class="review__content">
+											<h3 class="review__title review__title--label">Комментарий к заказу</h3>
+											<textarea data-fls-input="" autocomplete="off" name="form[]" placeholder="Введите текст сообщения" data-error="Помилка" class="review__textarea input"></textarea>
+										</div>
+										<button type="button" data-fls-button="" class="button">Сохранить</button>
+									</div>
+								</div>
+							</div>
+							<div class="stamp">
+								<div data-fls-card="" class="stamp__overlay" data-control="card"></div>
+								<div class="stamp__wrapper" data-control="card">
+									<div class="stamp__decore">
+										<img src="./assets/img/decore/plashka.svg" alt="Decore">
+									</div>
+									<div class="stamp__body card">
+										<div class="card__content">
+											<h3 class="card__title card__title--label">Добавление карты</h3>
+											<div class="card__form">
+												<div class="card__label">
+													<span>Номер карты</span>
+													<input data-fls-input="" required class="input input--data" data-fls-input-mask="9999-9999-9999-9999" autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="0000-0000-0000-0000">
+												</div>
+												<div class="card__addition">
+													<div class="card__label">
+														<span>мм / гг</span>
+														<input data-fls-input="" required class="input input--data" data-fls-input-mask="99 / 99" autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="00 / 00">
+													</div>
+													<div class="card__label">
+														<span>CVV</span>
+														<input data-fls-input="" required class="input input--data" data-fls-input-mask="999" autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="000">
+													</div>
+												</div>
+											</div>
+										</div>
+										<button type="button" data-fls-button="" class="button">Сохранить</button>
+									</div>
+								</div>
+							</div>
+							<div class="stamp">
+								<div data-fls-promo="" class="stamp__overlay" data-control="promo"></div>
+								<div class="stamp__wrapper" data-control="promo">
+									<div class="stamp__decore">
+										<img src="./assets/img/decore/plashka.svg" alt="Decore">
+									</div>
+									<div class="stamp__body promo">
+										<div class="promo__content">
+											<h3 class="promo__title promo__title--label">Введите промокод</h3>
+											<input data-fls-input="" class="input input--data input--center" autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Промокод">
+										</div>
+										<button type="button" data-fls-button="" class="button">Сохранить</button>
+									</div>
+								</div>
+							</div>
+							<div class="stamp">
+								<div data-fls-intime="" class="stamp__overlay" data-control="intime"></div>
+								<div class="stamp__wrapper" data-control="intime">
+									<div class="stamp__decore">
+										<img src="./assets/img/decore/plashka.svg" alt="Decore">
+									</div>
+									<div class="stamp__body time">
+										<div class="time__content">
+											<h3 class="time__title time__title--label">Ко времени</h3>
+											<div class="time__below">
+												<span>Сегодня</span>
+												<input data-fls-input="" data-fls-input-mask="99:99" autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="00:00" class="time__input">
+											</div>
+										</div>
+										<button type="button" data-fls-button="" class="button">Выбрать</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<div data-fls-controls="" class="controls">
+					<section class="control control-lock control-gnf" data-control="book">
+						<div class="control__head">
+							<button type="button" data-fls-button="" data-fls-book="" class="control__close control__close--icon-arrow button-box"></button>
+							<h2 class="control__title control__title--title">Бронирование</h2>
+						</div>
+						<form action="#" class="control__book book">
+							<div class="book__main">
+								<div class="book__head">
+									<h3 class="book__title-head book__title-head--label">Название заведения</h3>
+									<span>Адрес заведения</span>
+								</div>
+								<div class="book__actions">
+									<button type="button" data-fls-calendar="" class="book__action book__action--icon-calendar">
+										<span>20.10</span>
+									</button>
+									<button type="button" data-fls-time="" class="book__action book__action--icon-time">
+										<span>12:30</span>
+									</button>
+									<button type="button" data-fls-count="" class="book__action book__action--icon-people">
+										<span>3</span>
+									</button>
+								</div>
+								<div class="book__inner">
+									<div class="book__label">
+										<span>Имя</span>
+										<input data-fls-input="" autocomplete="off" type="text" name="form[]" data-error="Error" class="input">
+									</div>
+									<div class="book__label">
+										<span>Телефон</span>
+										<input data-fls-input="" data-fls-input-mask="+7-999-999-99-99" autocomplete="off" type="text" name="form[]" data-error="Error" class="input">
+									</div>
+									<div class="book__label">
+										<span>Пожелания к брони</span>
+										<textarea data-fls-input="" autocomplete="off" name="form[]" data-error="Error" class="input"></textarea>
+									</div>
+								</div>
+								<div data-fls-stamps="" class="stamps">
+									<div class="stamp">
+										<div data-fls-calendar="" class="stamp__overlay" data-control="calendar"></div>
+										<div class="stamp__wrapper" data-control="calendar">
+											<div class="stamp__decore">
+												<img src="./assets/img/decore/plashka.svg" alt="Decore">
+											</div>
+											<div class="stamp__body calendar">
+												<div class="calendar__content">
+													<h3 class="calendar__title calendar__title--label">Дата</h3>
+													<div data-fls-yearbook="" class="calendar__yearbook"></div>
+												</div>
+												<button type="button" data-fls-button="" class="button">Выбрать</button>
+											</div>
+										</div>
+									</div>
+									<div class="stamp">
+										<div data-fls-time="" class="stamp__overlay" data-control="time"></div>
+										<div class="stamp__wrapper" data-control="time">
+											<div class="stamp__decore">
+												<img src="./assets/img/decore/plashka.svg" alt="Decore">
+											</div>
+											<div class="stamp__body time">
+												<div class="time__content">
+													<h3 class="time__title time__title--label">Время</h3>
+													<div class="time__below">
+														<span>с</span>
+														<input data-fls-input="" data-fls-input-mask="99:99" autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="00:00" class="time__input">
+														<span>до</span>
+														<input data-fls-input="" data-fls-input-mask="99:99" autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="00:00" class="time__input">
+													</div>
+												</div>
+												<button type="button" data-fls-button="" class="button">Выбрать</button>
+											</div>
+										</div>
+									</div>
+									<div class="stamp">
+										<div data-fls-count="" class="stamp__overlay" data-control="count"></div>
+										<div class="stamp__wrapper" data-control="count">
+											<div class="stamp__decore">
+												<img src="./assets/img/decore/plashka.svg" alt="Decore">
+											</div>
+											<div class="stamp__body count">
+												<div class="count__content">
+													<h3 class="count__title count__title--label">Количество гостей</h3>
+													<div class="count__items">
+														<button type="button" class="count__item count__item--active">1</button>
+														<button type="button" class="count__item">2</button>
+														<button type="button" class="count__item">3</button>
+														<button type="button" class="count__item">4</button>
+														<button type="button" class="count__item">5</button>
+														<button type="button" class="count__item">6</button>
+														<button type="button" class="count__item">7</button>
+														<button type="button" class="count__item">8</button>
+														<button type="button" class="count__item">9</button>
+														<button type="button" class="count__item">10</button>
+														<button type="button" class="count__item">11</button>
+														<button type="button" class="count__item">12+</button>
+													</div>
+												</div>
+												<button type="button" data-fls-button="" class="button">Выбрать</button>
+											</div>
+										</div>
+									</div>
+									<div class="stamp">
+										<div data-fls-review="" class="stamp__overlay" data-control="review"></div>
+										<div class="stamp__wrapper" data-control="review">
+											<div class="stamp__decore">
+												<img src="./assets/img/decore/plashka.svg" alt="Decore">
+											</div>
+											<div class="stamp__body review">
+												<div class="review__content">
+													<h3 class="review__title review__title--label">Комментарий к заказу</h3>
+													<textarea data-fls-input="" autocomplete="off" name="form[]" placeholder="Введите текст сообщения" data-error="Помилка" class="review__textarea input"></textarea>
+												</div>
+												<button type="button" data-fls-button="" class="button">Сохранить</button>
+											</div>
+										</div>
+									</div>
+									<div class="stamp">
+										<div data-fls-card="" class="stamp__overlay" data-control="card"></div>
+										<div class="stamp__wrapper" data-control="card">
+											<div class="stamp__decore">
+												<img src="./assets/img/decore/plashka.svg" alt="Decore">
+											</div>
+											<div class="stamp__body card">
+												<div class="card__content">
+													<h3 class="card__title card__title--label">Добавление карты</h3>
+													<div class="card__form">
+														<div class="card__label">
+															<span>Номер карты</span>
+															<input data-fls-input="" required class="input input--data" data-fls-input-mask="9999-9999-9999-9999" autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="0000-0000-0000-0000">
+														</div>
+														<div class="card__addition">
+															<div class="card__label">
+																<span>мм / гг</span>
+																<input data-fls-input="" required class="input input--data" data-fls-input-mask="99 / 99" autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="00 / 00">
+															</div>
+															<div class="card__label">
+																<span>CVV</span>
+																<input data-fls-input="" required class="input input--data" data-fls-input-mask="999" autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="000">
+															</div>
+														</div>
+													</div>
+												</div>
+												<button type="button" data-fls-button="" class="button">Сохранить</button>
+											</div>
+										</div>
+									</div>
+									<div class="stamp">
+										<div data-fls-promo="" class="stamp__overlay" data-control="promo"></div>
+										<div class="stamp__wrapper" data-control="promo">
+											<div class="stamp__decore">
+												<img src="./assets/img/decore/plashka.svg" alt="Decore">
+											</div>
+											<div class="stamp__body promo">
+												<div class="promo__content">
+													<h3 class="promo__title promo__title--label">Введите промокод</h3>
+													<input data-fls-input="" class="input input--data input--center" autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Промокод">
+												</div>
+												<button type="button" data-fls-button="" class="button">Сохранить</button>
+											</div>
+										</div>
+									</div>
+									<div class="stamp">
+										<div data-fls-intime="" class="stamp__overlay" data-control="intime"></div>
+										<div class="stamp__wrapper" data-control="intime">
+											<div class="stamp__decore">
+												<img src="./assets/img/decore/plashka.svg" alt="Decore">
+											</div>
+											<div class="stamp__body time">
+												<div class="time__content">
+													<h3 class="time__title time__title--label">Ко времени</h3>
+													<div class="time__below">
+														<span>Сегодня</span>
+														<input data-fls-input="" data-fls-input-mask="99:99" autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="00:00" class="time__input">
+													</div>
+												</div>
+												<button type="button" data-fls-button="" class="button">Выбрать</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<button type="button" data-fls-button="" data-fls-done="" class="button">Забронировать</button>
+						</form>
+					</section>
+					<section class="control" data-control="done">
+						<div class="control__wrapper">
+							<div class="control__head">
+								<button type="button" data-fls-button="" data-fls-done="" class="control__close control__close--icon-arrow button-box"></button>
+								<h2 class="control__title control__title--title">Бронирование</h2>
+							</div>
+							<div class="control__done done">
+								<h3 class="done__title done__title--label">Заявка успешно отправлена</h3>
+								<div class="done__text">
+									<p>
+										Дождитесь обработки заявки заведением. Отследить актуальный статус вы можетена главной странице
+									</p>
+								</div>
+								<div class="done__icon done__icon--icon-reserve"></div>
+							</div>
+						</div>
+						<div class="control__actions">
+							<button type="button" data-fls-button="" data-fls-done="" class="button">На главную</button>
+							<button type="button" data-fls-button="" class="button button--black">Отменить бронь</button>
+						</div>
+					</section>
+					<section class="control" data-control="choose">
+						<div class="control__wrapper">
+							<div class="control__head">
+								<button type="button" data-fls-button="" data-fls-choose="" class="control__close control__close--icon-arrow button-box"></button>
+								<h2 class="control__title control__title--title">Адрес заведения</h2>
+							</div>
+							<div class="control__choose choose">
+								<button type="button" class="choose__button choose__button--active choose__button--icon-location">
+									<div class="choose__inner">
+										<div class="choose__label">Название ресторана</div>
+										<div class="choose__location">ул. Пушкина, д. 00</div>
+									</div>
+								</button>
+								<button type="button" class="choose__button choose__button--icon-location">
+									<div class="choose__inner">
+										<div class="choose__label">Название ресторана</div>
+										<div class="choose__location">ул. Пушкина, д. 00</div>
+									</div>
+								</button>
+								<button type="button" class="choose__button choose__button--icon-location">
+									<div class="choose__inner">
+										<div class="choose__label">Название ресторана</div>
+										<div class="choose__location">ул. Пушкина, д. 00</div>
+									</div>
+								</button>
+								<button type="button" class="choose__button choose__button--icon-location">
+									<div class="choose__inner">
+										<div class="choose__label">Название ресторана</div>
+										<div class="choose__location">ул. Пушкина, д. 00</div>
+									</div>
+								</button>
+							</div>
+						</div>
+						<button type="button" data-fls-button="" data-fls-choose="" class="button">Выбрать</button>
+					</section>
+					<section class="control" data-control="delivery">
+						<div class="control__wrapper">
+							<div class="control__head">
+								<button type="button" data-fls-button="" data-fls-delivery="" class="control__close control__close--icon-arrow button-box"></button>
+								<h2 class="control__title control__title--title">Мои адреса</h2>
+							</div>
+							<div class="control__delivery delivery">
+								<button type="button" class="delivery__add delivery__add--icon-plus">Добавить адрес</button>
+								<div class="delivery__history">
+									<button type="button" class="delivery__button delivery__button--active delivery__button--icon-location">
+										<div class="delivery__inner">
+											<div class="delivery__label">Название ресторана</div>
+											<div class="delivery__location">ул. Пушкина, д. 00</div>
+										</div>
+									</button>
+									<button type="button" class="delivery__button delivery__button--icon-location">
+										<div class="delivery__inner">
+											<div class="delivery__label">Название ресторана</div>
+											<div class="delivery__location">ул. Пушкина, д. 00</div>
+										</div>
+									</button>
+									<button type="button" class="delivery__button delivery__button--icon-location">
+										<div class="delivery__inner">
+											<div class="delivery__label">Название ресторана</div>
+											<div class="delivery__location">ул. Пушкина, д. 00</div>
+										</div>
+									</button>
+									<button type="button" class="delivery__button delivery__button--icon-location">
+										<div class="delivery__inner">
+											<div class="delivery__label">Название ресторана</div>
+											<div class="delivery__location">ул. Пушкина, д. 00</div>
+										</div>
+									</button>
+								</div>
+							</div>
+						</div>
+						<button type="button" data-fls-button="" data-fls-delivery="" class="button">Выбрать</button>
+					</section>
+					<section class="control" data-control="finish">
+						<div class="control__wrapper">
+							<div class="control__head">
+								<button type="button" data-fls-button="" data-fls-finish="" class="control__close control__close--icon-arrow button-box"></button>
+								<h2 class="control__title control__title--title">Все получилось</h2>
+							</div>
+							<div class="control__finish finish">
+								<div class="finish__head">
+									<h3 class="finish__title">Заказ успешно оформлен</h3>
+									<div class="finish__labels">
+										<span>#1234567890</span>
+										<span>00.00.0000</span>
+									</div>
+								</div>
+								<div class="finish__phase finish-phase">
+									<div class="finish-phase__progres">
+										<div class="finish-phase__line-progres">
+											<span style="width: 34%;"></span>
+										</div>
+									</div>
+									<div class="finish-phase__items">
+										<div class="finish-phase__item">
+											<div class="finish-phase__preview">
+												<svg width="56" height="42" viewbox="0 0 56 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M3.45673 0H51.8397C53.742 0 55.2928 1.5508 55.2928 3.4531V30.4731C55.2928 32.3754 53.742 33.9262 51.8397 33.9262H32.3827C32.3202 33.9262 32.2694 33.9575 32.2382 34.0082L27.7929 41.7074C27.7265 41.8207 27.5702 41.8207 27.5038 41.7074L23.0585 34.0082C23.0273 33.9535 22.9765 33.9262 22.914 33.9262H3.45701C1.55471 33.9262 0.00390625 32.3754 0.00390625 30.4731L0 3.4531C0.003907 1.5508 1.55443 0 3.45673 0ZM26.4646 6.148V10.5464C26.4646 10.6323 26.3982 10.7066 26.3123 10.7105C20.4412 11.2144 15.3903 14.9957 13.2103 20.3863C13.1673 20.4956 13.2454 20.6128 13.3626 20.6128H41.9286C42.0458 20.6128 42.1278 20.4956 42.081 20.3863C39.9169 15.0347 34.9208 11.2652 29.101 10.7222C29.015 10.7143 28.9486 10.644 28.9486 10.5581L28.9525 6.1479C28.9525 5.4604 28.3939 4.9018 27.7064 4.9018C27.0189 4.9018 26.4646 5.45659 26.4646 6.148ZM12.4806 23.07C12.4259 23.07 12.3791 23.0934 12.3478 23.1364L10.8869 25.0856C9.98458 26.2926 10.84 28.0075 12.3478 28.0075H42.9498C44.4576 28.0075 45.317 26.2887 44.4107 25.0856L42.9498 23.1364C42.9186 23.0934 42.8717 23.07 42.817 23.07H12.4806Z" fill="#6F9AFA"></path>
+												</svg>
+											</div>
+											<div class="finish-phase__icon finish-phase__icon--active">
+												<svg width="21" height="21" viewbox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M4.66496 1.29706L7.3439 0.111835C7.46232 0.0594445 7.59724 0.0574697 7.71899 0.106345C7.84074 0.155219 7.93933 0.250941 7.99309 0.37245L10.1496 5.2468L11.9825 0.312873C12.0284 0.190723 12.1203 0.0929305 12.2382 0.0408067C12.356 -0.0113163 12.4901 -0.0135462 12.6115 0.0346028L15.3663 1.14052C15.4265 1.16436 15.4817 1.20003 15.5287 1.24546C15.5758 1.29089 15.6136 1.34518 15.6402 1.40519C15.6667 1.4652 15.6814 1.52975 15.6834 1.5951C15.6854 1.66045 15.6747 1.7253 15.6518 1.78592L13.8189 6.71984L18.5692 4.61821C18.6276 4.59205 18.6908 4.57799 18.755 4.57683C18.8193 4.57568 18.8834 4.58745 18.9436 4.61148C19.0038 4.63551 19.0591 4.67133 19.1061 4.71686C19.1531 4.7624 19.1909 4.81676 19.2175 4.87684L20.4337 7.62575C20.4875 7.74726 20.492 7.88461 20.4463 8.00757C20.4005 8.13054 20.3083 8.22905 20.1899 8.28144L15.4396 10.3831L20.3227 12.3434C20.3829 12.3672 20.4381 12.4029 20.4851 12.4483C20.5322 12.4937 20.57 12.548 20.5966 12.608C20.6231 12.668 20.6378 12.7326 20.6398 12.7979C20.6418 12.8633 20.6311 12.9281 20.6082 12.9888L19.5737 15.7712C19.5514 15.832 19.5174 15.8875 19.4736 15.9345C19.4298 15.9815 19.3772 16.019 19.3187 16.0449C19.2602 16.0708 19.1971 16.0845 19.1329 16.0853C19.0687 16.086 19.0047 16.0739 18.9447 16.0494L14.0617 14.0891L16.2182 18.9635C16.272 19.085 16.2765 19.2224 16.2307 19.3453C16.185 19.4683 16.0928 19.5668 15.9744 19.6192L13.2955 20.8044C13.1771 20.8561 13.0426 20.8577 12.9213 20.8086C12.8 20.7596 12.7018 20.6641 12.6482 20.5429L10.4917 15.6686L8.65599 20.6014C8.6337 20.6622 8.5997 20.7178 8.55594 20.7647C8.51218 20.8117 8.45953 20.8492 8.40105 20.8751C8.34256 20.901 8.2794 20.9147 8.2152 20.9155C8.151 20.9163 8.08704 20.9041 8.02702 20.8797L5.27221 19.7737C5.15126 19.7246 5.05338 19.6292 4.99989 19.5084C4.94641 19.3875 4.94165 19.2509 4.98667 19.1283L6.82236 14.1955L2.07209 16.2972C2.01345 16.3231 1.95015 16.337 1.88579 16.3379C1.82144 16.3388 1.75728 16.3269 1.697 16.3027C1.63672 16.2785 1.58149 16.2425 1.53446 16.1969C1.48742 16.1512 1.44952 16.0967 1.4229 16.0366L0.206716 13.2876C0.153623 13.1663 0.14956 13.0293 0.195415 12.9068C0.24127 12.7843 0.333309 12.6862 0.45139 12.6339L5.20166 10.5323L0.315819 8.5709C0.19487 8.5218 0.0969875 8.42641 0.0435022 8.30552C-0.00998289 8.18463 -0.0147356 8.04804 0.0302802 7.92551L1.06481 5.1431C1.11077 5.02095 1.20267 4.92316 1.32049 4.87103C1.4383 4.81891 1.57248 4.81668 1.69378 4.86483L6.57963 6.82624L4.42311 1.95189C4.39627 1.89193 4.38125 1.8274 4.37888 1.76199C4.37652 1.69658 4.38688 1.63159 4.40935 1.57075C4.43182 1.5099 4.46597 1.45441 4.50983 1.40744C4.5537 1.36047 4.60642 1.32296 4.66496 1.29706Z" fill="#EBF1FF"></path>
+												</svg>
+											</div>
+											<span>Принят</span>
+										</div>
+										<div class="finish-phase__item">
+											<div class="finish-phase__preview">
+												<svg width="60" height="47" viewbox="0 0 60 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M9.29887 16.1678C7.94181 17.1757 7.25977 18.2796 7.25977 19.4492C7.25977 19.7305 7.48712 19.9602 7.77072 19.9602C8.05198 19.9602 8.28167 19.7328 8.28167 19.4492C8.28167 18.6218 8.82778 17.7921 9.913 16.9882C10.7169 16.3882 11.1599 15.5772 11.1599 14.7146C11.1599 13.8498 10.7169 13.0411 9.913 12.4411C8.83249 11.6372 8.28167 10.8098 8.28167 9.98008C8.28167 9.15272 8.82778 8.32301 9.913 7.51905C10.7169 6.91903 11.1599 6.10804 11.1599 5.24552C11.1599 4.38065 10.7169 3.57201 9.913 2.97199C8.83249 2.16808 8.28167 1.34066 8.28167 0.510951C8.28167 0.229693 8.05432 0 7.77072 0C7.48946 0 7.25977 0.227353 7.25977 0.510951C7.25977 1.68051 7.94883 2.78448 9.29887 3.79233C9.83795 4.19547 10.1379 4.71108 10.1379 5.2502C10.1379 5.78458 9.83792 6.30023 9.29887 6.70806C7.94181 7.71591 7.25977 8.81983 7.25977 9.98944C7.25977 11.159 7.94883 12.263 9.29887 13.2708C9.83795 13.674 10.1379 14.1896 10.1379 14.7287C10.1379 15.249 9.83792 15.7671 9.29887 16.1678Z" fill="#E4ECFF"></path>
+													<path d="M19.8125 16.1678C18.4555 17.1757 17.7734 18.2796 17.7734 19.4492C17.7734 19.7305 18.0008 19.9602 18.2844 19.9602C18.5656 19.9602 18.7953 19.7328 18.7953 19.4492C18.7953 18.6218 19.3415 17.7921 20.4267 16.9882C21.2306 16.3882 21.6736 15.5772 21.6736 14.7146C21.6736 13.8498 21.2306 13.0411 20.4267 12.4411C19.3462 11.6372 18.7953 10.8098 18.7953 9.98008C18.7953 9.15272 19.3415 8.32301 20.4267 7.51905C21.2306 6.91903 21.6736 6.10804 21.6736 5.24552C21.6736 4.38065 21.2306 3.57201 20.4267 2.97199C19.3462 2.16808 18.7953 1.34066 18.7953 0.510951C18.7953 0.229693 18.568 0 18.2844 0C18.0031 0 17.7734 0.227353 17.7734 0.510951C17.7734 1.68051 18.4625 2.78448 19.8125 3.79233C20.3516 4.19547 20.6516 4.71108 20.6516 5.2502C20.6516 5.78458 20.3516 6.30023 19.8125 6.70806C18.4555 7.71591 17.7734 8.81983 17.7734 9.98944C17.7734 11.159 18.4625 12.263 19.8125 13.2708C20.3516 13.674 20.6516 14.1896 20.6516 14.7287C20.6469 15.249 20.3539 15.7671 19.8125 16.1678Z" fill="#E4ECFF"></path>
+													<path d="M30.3184 16.1678C28.9613 17.1757 28.2793 18.2796 28.2793 19.4492C28.2793 19.7305 28.5067 19.9602 28.7903 19.9602C29.0715 19.9602 29.3012 19.7328 29.3012 19.4492C29.3012 18.6218 29.8473 17.7921 30.9325 16.9882C31.7364 16.3882 32.1794 15.5772 32.1794 14.7146C32.1794 13.8498 31.7364 13.0411 30.9325 12.4411C29.852 11.6372 29.3012 10.8098 29.3012 9.98008C29.3012 9.15272 29.8473 8.32301 30.9325 7.51905C31.7364 6.91903 32.1794 6.10804 32.1794 5.24552C32.1794 4.38065 31.7364 3.57201 30.9325 2.97199C29.852 2.16808 29.3012 1.34066 29.3012 0.510951C29.3012 0.229693 29.0738 0 28.7903 0C28.509 0 28.2793 0.227353 28.2793 0.510951C28.2793 1.68051 28.9684 2.78448 30.3184 3.79233C30.8575 4.19547 31.1575 4.71108 31.1575 5.2502C31.1575 5.78458 30.8575 6.30023 30.3184 6.70806C28.9613 7.71591 28.2793 8.81983 28.2793 9.98944C28.2793 11.159 28.9684 12.263 30.3184 13.2708C30.8575 13.674 31.1575 14.1896 31.1575 14.7287C31.1575 15.249 30.8575 15.7671 30.3184 16.1678Z" fill="#E4ECFF"></path>
+													<path d="M57.7045 25.102H46.9864C45.9293 25.102 45.0433 25.8169 44.7785 26.7826H40.6979C40.7401 26.4169 40.7635 26.0396 40.7635 25.6599C40.7635 25.3786 40.5362 25.1489 40.2526 25.1489H0.510952C0.227347 25.156 0 25.3786 0 25.6669C0 30.8983 4.25401 35.1592 9.48569 35.1592H31.2784C35.7715 35.1592 39.5472 32.0161 40.5174 27.809H44.7363C44.9214 28.8825 45.859 29.6981 46.9864 29.6981H57.7021C58.9678 29.6981 59.999 28.6668 59.999 27.4011C60.0014 26.1331 58.9702 25.102 57.7045 25.102Z" fill="#E4ECFF"></path>
+													<path d="M10.3911 36.8378C10.2223 36.8378 10.0723 36.9152 9.97624 37.0488C9.67623 37.4636 7.03711 41.0919 7.03711 42.7841C7.03711 44.631 8.54418 46.1311 10.3911 46.1311C12.238 46.1311 13.7381 44.631 13.7381 42.7841C13.7381 41.0989 11.1036 37.4613 10.8036 37.0488C10.7028 36.9175 10.5528 36.8378 10.3911 36.8378Z" fill="#E4ECFF"></path>
+													<path d="M17.5376 36.8378C17.3688 36.8378 17.2188 36.9152 17.1227 37.0488C16.8227 37.4636 14.1836 41.0919 14.1836 42.7841C14.1836 44.631 15.6907 46.1311 17.5376 46.1311C19.3845 46.1311 20.8845 44.631 20.8845 42.7841C20.8845 41.0989 18.2501 37.4613 17.9501 37.0488C17.8493 36.9175 17.6993 36.8378 17.5376 36.8378Z" fill="#E4ECFF"></path>
+													<path d="M24.6841 36.8378C24.5153 36.8378 24.3653 36.9152 24.2692 37.0488C23.9692 37.4636 21.3301 41.0919 21.3301 42.7841C21.3301 44.631 22.8371 46.1311 24.6841 46.1311C26.531 46.1311 28.031 44.631 28.031 42.7841C28.031 41.0989 25.3966 37.4613 25.0966 37.0488C24.9958 36.9175 24.8458 36.8378 24.6841 36.8378Z" fill="#E4ECFF"></path>
+													<path d="M31.8306 36.8378C31.6618 36.8378 31.5118 36.9152 31.4157 37.0488C31.1157 37.4636 28.4766 41.0919 28.4766 42.7841C28.4766 44.631 29.9836 46.1311 31.8305 46.1311C33.6775 46.1311 35.1775 44.631 35.1775 42.7841C35.1775 41.0989 32.5431 37.4613 32.2431 37.0488C32.1423 36.9175 31.9852 36.8378 31.8306 36.8378Z" fill="#E4ECFF"></path>
+												</svg>
+											</div>
+											<div class="finish-phase__icon finish-phase__icon--active">
+												<svg width="21" height="21" viewbox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M4.66496 1.29706L7.3439 0.111835C7.46232 0.0594445 7.59724 0.0574697 7.71899 0.106345C7.84074 0.155219 7.93933 0.250941 7.99309 0.37245L10.1496 5.2468L11.9825 0.312873C12.0284 0.190723 12.1203 0.0929305 12.2382 0.0408067C12.356 -0.0113163 12.4901 -0.0135462 12.6115 0.0346028L15.3663 1.14052C15.4265 1.16436 15.4817 1.20003 15.5287 1.24546C15.5758 1.29089 15.6136 1.34518 15.6402 1.40519C15.6667 1.4652 15.6814 1.52975 15.6834 1.5951C15.6854 1.66045 15.6747 1.7253 15.6518 1.78592L13.8189 6.71984L18.5692 4.61821C18.6276 4.59205 18.6908 4.57799 18.755 4.57683C18.8193 4.57568 18.8834 4.58745 18.9436 4.61148C19.0038 4.63551 19.0591 4.67133 19.1061 4.71686C19.1531 4.7624 19.1909 4.81676 19.2175 4.87684L20.4337 7.62575C20.4875 7.74726 20.492 7.88461 20.4463 8.00757C20.4005 8.13054 20.3083 8.22905 20.1899 8.28144L15.4396 10.3831L20.3227 12.3434C20.3829 12.3672 20.4381 12.4029 20.4851 12.4483C20.5322 12.4937 20.57 12.548 20.5966 12.608C20.6231 12.668 20.6378 12.7326 20.6398 12.7979C20.6418 12.8633 20.6311 12.9281 20.6082 12.9888L19.5737 15.7712C19.5514 15.832 19.5174 15.8875 19.4736 15.9345C19.4298 15.9815 19.3772 16.019 19.3187 16.0449C19.2602 16.0708 19.1971 16.0845 19.1329 16.0853C19.0687 16.086 19.0047 16.0739 18.9447 16.0494L14.0617 14.0891L16.2182 18.9635C16.272 19.085 16.2765 19.2224 16.2307 19.3453C16.185 19.4683 16.0928 19.5668 15.9744 19.6192L13.2955 20.8044C13.1771 20.8561 13.0426 20.8577 12.9213 20.8086C12.8 20.7596 12.7018 20.6641 12.6482 20.5429L10.4917 15.6686L8.65599 20.6014C8.6337 20.6622 8.5997 20.7178 8.55594 20.7647C8.51218 20.8117 8.45953 20.8492 8.40105 20.8751C8.34256 20.901 8.2794 20.9147 8.2152 20.9155C8.151 20.9163 8.08704 20.9041 8.02702 20.8797L5.27221 19.7737C5.15126 19.7246 5.05338 19.6292 4.99989 19.5084C4.94641 19.3875 4.94165 19.2509 4.98667 19.1283L6.82236 14.1955L2.07209 16.2972C2.01345 16.3231 1.95015 16.337 1.88579 16.3379C1.82144 16.3388 1.75728 16.3269 1.697 16.3027C1.63672 16.2785 1.58149 16.2425 1.53446 16.1969C1.48742 16.1512 1.44952 16.0967 1.4229 16.0366L0.206716 13.2876C0.153623 13.1663 0.14956 13.0293 0.195415 12.9068C0.24127 12.7843 0.333309 12.6862 0.45139 12.6339L5.20166 10.5323L0.315819 8.5709C0.19487 8.5218 0.0969875 8.42641 0.0435022 8.30552C-0.00998289 8.18463 -0.0147356 8.04804 0.0302802 7.92551L1.06481 5.1431C1.11077 5.02095 1.20267 4.92316 1.32049 4.87103C1.4383 4.81891 1.57248 4.81668 1.69378 4.86483L6.57963 6.82624L4.42311 1.95189C4.39627 1.89193 4.38125 1.8274 4.37888 1.76199C4.37652 1.69658 4.38688 1.63159 4.40935 1.57075C4.43182 1.5099 4.46597 1.45441 4.50983 1.40744C4.5537 1.36047 4.60642 1.32296 4.66496 1.29706Z" fill="#EBF1FF"></path>
+												</svg>
+											</div>
+											<span>Готовится</span>
+										</div>
+										<div class="finish-phase__item">
+											<div class="finish-phase__preview">
+												<svg width="64" height="26" viewbox="0 0 64 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M62.65 23.2371H57.8249C55.2649 14.1141 47.4249 7.14567 37.8876 5.08332C37.3251 2.1566 34.9176 0 32.0051 0C29.0926 0 26.6751 2.16688 26.1176 5.08843C16.5829 7.14528 8.74287 14.1139 6.19502 23.237H1.35002C0.607489 23.237 0 23.8587 0 24.6185C0 25.386 0.607502 26 1.35002 26H62.65C63.3925 26 64 25.3834 64 24.6185C64 23.8587 63.3925 23.2371 62.65 23.2371ZM26.6698 13.0937C23.3423 14.1093 20.4672 16.0332 18.3497 18.6478C18.0797 18.9829 17.6973 19.1517 17.3072 19.1517C16.9997 19.1517 16.6922 19.0469 16.4422 18.832C15.8672 18.3408 15.7897 17.471 16.2697 16.88C18.7397 13.8407 22.0622 11.615 25.8947 10.4433C26.6122 10.2207 27.3597 10.6403 27.5772 11.3745C27.7897 12.1037 27.3798 12.8711 26.6698 13.0937ZM32.0072 4.45459C31.0347 4.45459 30.0797 4.50064 29.1272 4.60553C29.6847 3.50546 30.7647 2.76611 32.0072 2.76611C33.2497 2.76611 34.3247 3.50546 34.8872 4.60553C33.9322 4.50064 32.9797 4.45459 32.0072 4.45459Z" fill="#E4ECFF"></path>
+												</svg>
+											</div>
+											<div class="finish-phase__icon">
+												<svg width="21" height="21" viewbox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M4.66496 1.29706L7.3439 0.111835C7.46232 0.0594445 7.59724 0.0574697 7.71899 0.106345C7.84074 0.155219 7.93933 0.250941 7.99309 0.37245L10.1496 5.2468L11.9825 0.312873C12.0284 0.190723 12.1203 0.0929305 12.2382 0.0408067C12.356 -0.0113163 12.4901 -0.0135462 12.6115 0.0346028L15.3663 1.14052C15.4265 1.16436 15.4817 1.20003 15.5287 1.24546C15.5758 1.29089 15.6136 1.34518 15.6402 1.40519C15.6667 1.4652 15.6814 1.52975 15.6834 1.5951C15.6854 1.66045 15.6747 1.7253 15.6518 1.78592L13.8189 6.71984L18.5692 4.61821C18.6276 4.59205 18.6908 4.57799 18.755 4.57683C18.8193 4.57568 18.8834 4.58745 18.9436 4.61148C19.0038 4.63551 19.0591 4.67133 19.1061 4.71686C19.1531 4.7624 19.1909 4.81676 19.2175 4.87684L20.4337 7.62575C20.4875 7.74726 20.492 7.88461 20.4463 8.00757C20.4005 8.13054 20.3083 8.22905 20.1899 8.28144L15.4396 10.3831L20.3227 12.3434C20.3829 12.3672 20.4381 12.4029 20.4851 12.4483C20.5322 12.4937 20.57 12.548 20.5966 12.608C20.6231 12.668 20.6378 12.7326 20.6398 12.7979C20.6418 12.8633 20.6311 12.9281 20.6082 12.9888L19.5737 15.7712C19.5514 15.832 19.5174 15.8875 19.4736 15.9345C19.4298 15.9815 19.3772 16.019 19.3187 16.0449C19.2602 16.0708 19.1971 16.0845 19.1329 16.0853C19.0687 16.086 19.0047 16.0739 18.9447 16.0494L14.0617 14.0891L16.2182 18.9635C16.272 19.085 16.2765 19.2224 16.2307 19.3453C16.185 19.4683 16.0928 19.5668 15.9744 19.6192L13.2955 20.8044C13.1771 20.8561 13.0426 20.8577 12.9213 20.8086C12.8 20.7596 12.7018 20.6641 12.6482 20.5429L10.4917 15.6686L8.65599 20.6014C8.6337 20.6622 8.5997 20.7178 8.55594 20.7647C8.51218 20.8117 8.45953 20.8492 8.40105 20.8751C8.34256 20.901 8.2794 20.9147 8.2152 20.9155C8.151 20.9163 8.08704 20.9041 8.02702 20.8797L5.27221 19.7737C5.15126 19.7246 5.05338 19.6292 4.99989 19.5084C4.94641 19.3875 4.94165 19.2509 4.98667 19.1283L6.82236 14.1955L2.07209 16.2972C2.01345 16.3231 1.95015 16.337 1.88579 16.3379C1.82144 16.3388 1.75728 16.3269 1.697 16.3027C1.63672 16.2785 1.58149 16.2425 1.53446 16.1969C1.48742 16.1512 1.44952 16.0967 1.4229 16.0366L0.206716 13.2876C0.153623 13.1663 0.14956 13.0293 0.195415 12.9068C0.24127 12.7843 0.333309 12.6862 0.45139 12.6339L5.20166 10.5323L0.315819 8.5709C0.19487 8.5218 0.0969875 8.42641 0.0435022 8.30552C-0.00998289 8.18463 -0.0147356 8.04804 0.0302802 7.92551L1.06481 5.1431C1.11077 5.02095 1.20267 4.92316 1.32049 4.87103C1.4383 4.81891 1.57248 4.81668 1.69378 4.86483L6.57963 6.82624L4.42311 1.95189C4.39627 1.89193 4.38125 1.8274 4.37888 1.76199C4.37652 1.69658 4.38688 1.63159 4.40935 1.57075C4.43182 1.5099 4.46597 1.45441 4.50983 1.40744C4.5537 1.36047 4.60642 1.32296 4.66496 1.29706Z" fill="#EBF1FF"></path>
+												</svg>
+											</div>
+											<span>Готов</span>
+										</div>
+										<div class="finish-phase__item">
+											<div class="finish-phase__preview">
+												<svg width="60" height="36" viewbox="0 0 60 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M43.1701 7.50444H56.6236C57.1307 7.50444 57.5504 7.88301 57.615 8.37358L59.9843 21.7215L59.9992 21.8934L60 29.1249C60 30.4791 58.8913 31.5912 57.5386 31.5912H55.9378C55.9378 28.4979 53.4244 25.9804 50.3362 25.9804C47.248 25.9804 44.7346 28.4979 44.7346 31.5912H41.7079C41.1559 31.5912 40.7079 31.1424 40.7079 30.5896V9.9699C40.7079 8.61334 41.8173 7.50444 43.1701 7.50444ZM32.5835 16.4388C33.1354 16.4388 33.5835 16.8875 33.5835 17.4404C33.5835 17.9933 33.1354 18.4421 32.5835 18.4421H12.4354C11.8835 18.4421 11.4354 17.9933 11.4354 17.4404C11.4354 16.8875 11.8835 16.4388 12.4354 16.4388H32.5835ZM9.48976 13.5837C8.93779 13.5837 8.48976 13.1349 8.48976 12.5821C8.48976 12.0292 8.93779 11.5804 9.48976 11.5804H29.6378C30.1898 11.5804 30.6378 12.0292 30.6378 12.5821C30.6378 13.1349 30.1898 13.5837 29.6378 13.5837H9.48976ZM6.54331 8.72455C5.99134 8.72455 5.54331 8.27578 5.54331 7.72291C5.54331 7.17003 5.99134 6.72126 6.54331 6.72126H26.6921C27.2441 6.72126 27.6921 7.17003 27.6921 7.72291C27.6921 8.27578 27.2441 8.72455 26.6921 8.72455H6.54331ZM13.937 27.1824C16.3677 27.1824 18.3386 29.1565 18.3386 31.5912C18.3386 34.0259 16.3677 36 13.937 36C11.5063 36 9.53543 34.0259 9.53543 31.5912C9.53543 29.1565 11.5063 27.1824 13.937 27.1824ZM50.3362 27.1824C52.7669 27.1824 54.7378 29.1565 54.7378 31.5912C54.7378 34.0259 52.7669 36 50.3362 36C47.9055 36 45.9346 34.0259 45.9346 31.5912C45.9346 29.1565 47.9055 27.1824 50.3362 27.1824ZM2.33386 0H36.8441C38.1283 0 39.178 1.05212 39.178 2.3369V30.5896C39.178 31.1424 38.7299 31.5912 38.178 31.5912H19.5386C19.5386 28.4979 17.0252 25.9804 13.937 25.9804C10.8488 25.9804 8.33543 28.4979 8.33543 31.5912H2.33386C1.04803 31.5912 0 30.543 0 29.2543V2.3369C0 1.05291 1.05118 0 2.33386 0Z" fill="#E4ECFF"></path>
+												</svg>
+											</div>
+											<div class="finish-phase__icon">
+												<svg width="21" height="21" viewbox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M4.66496 1.29706L7.3439 0.111835C7.46232 0.0594445 7.59724 0.0574697 7.71899 0.106345C7.84074 0.155219 7.93933 0.250941 7.99309 0.37245L10.1496 5.2468L11.9825 0.312873C12.0284 0.190723 12.1203 0.0929305 12.2382 0.0408067C12.356 -0.0113163 12.4901 -0.0135462 12.6115 0.0346028L15.3663 1.14052C15.4265 1.16436 15.4817 1.20003 15.5287 1.24546C15.5758 1.29089 15.6136 1.34518 15.6402 1.40519C15.6667 1.4652 15.6814 1.52975 15.6834 1.5951C15.6854 1.66045 15.6747 1.7253 15.6518 1.78592L13.8189 6.71984L18.5692 4.61821C18.6276 4.59205 18.6908 4.57799 18.755 4.57683C18.8193 4.57568 18.8834 4.58745 18.9436 4.61148C19.0038 4.63551 19.0591 4.67133 19.1061 4.71686C19.1531 4.7624 19.1909 4.81676 19.2175 4.87684L20.4337 7.62575C20.4875 7.74726 20.492 7.88461 20.4463 8.00757C20.4005 8.13054 20.3083 8.22905 20.1899 8.28144L15.4396 10.3831L20.3227 12.3434C20.3829 12.3672 20.4381 12.4029 20.4851 12.4483C20.5322 12.4937 20.57 12.548 20.5966 12.608C20.6231 12.668 20.6378 12.7326 20.6398 12.7979C20.6418 12.8633 20.6311 12.9281 20.6082 12.9888L19.5737 15.7712C19.5514 15.832 19.5174 15.8875 19.4736 15.9345C19.4298 15.9815 19.3772 16.019 19.3187 16.0449C19.2602 16.0708 19.1971 16.0845 19.1329 16.0853C19.0687 16.086 19.0047 16.0739 18.9447 16.0494L14.0617 14.0891L16.2182 18.9635C16.272 19.085 16.2765 19.2224 16.2307 19.3453C16.185 19.4683 16.0928 19.5668 15.9744 19.6192L13.2955 20.8044C13.1771 20.8561 13.0426 20.8577 12.9213 20.8086C12.8 20.7596 12.7018 20.6641 12.6482 20.5429L10.4917 15.6686L8.65599 20.6014C8.6337 20.6622 8.5997 20.7178 8.55594 20.7647C8.51218 20.8117 8.45953 20.8492 8.40105 20.8751C8.34256 20.901 8.2794 20.9147 8.2152 20.9155C8.151 20.9163 8.08704 20.9041 8.02702 20.8797L5.27221 19.7737C5.15126 19.7246 5.05338 19.6292 4.99989 19.5084C4.94641 19.3875 4.94165 19.2509 4.98667 19.1283L6.82236 14.1955L2.07209 16.2972C2.01345 16.3231 1.95015 16.337 1.88579 16.3379C1.82144 16.3388 1.75728 16.3269 1.697 16.3027C1.63672 16.2785 1.58149 16.2425 1.53446 16.1969C1.48742 16.1512 1.44952 16.0967 1.4229 16.0366L0.206716 13.2876C0.153623 13.1663 0.14956 13.0293 0.195415 12.9068C0.24127 12.7843 0.333309 12.6862 0.45139 12.6339L5.20166 10.5323L0.315819 8.5709C0.19487 8.5218 0.0969875 8.42641 0.0435022 8.30552C-0.00998289 8.18463 -0.0147356 8.04804 0.0302802 7.92551L1.06481 5.1431C1.11077 5.02095 1.20267 4.92316 1.32049 4.87103C1.4383 4.81891 1.57248 4.81668 1.69378 4.86483L6.57963 6.82624L4.42311 1.95189C4.39627 1.89193 4.38125 1.8274 4.37888 1.76199C4.37652 1.69658 4.38688 1.63159 4.40935 1.57075C4.43182 1.5099 4.46597 1.45441 4.50983 1.40744C4.5537 1.36047 4.60642 1.32296 4.66496 1.29706Z" fill="#EBF1FF"></path>
+												</svg>
+											</div>
+											<span>В пути</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<button type="button" data-fls-button="" data-fls-finish="" class="button">На главную</button>
+					</section>
+				</div>
+				<div data-fls-total="" class="total">
+					<div class="total__container">
+						<div class="total__main">
+							<div class="total__label">Итого</div>
+							<div class="total__total">0 000 ₽</div>
+						</div>
+						<button type="button" data-fls-button="" data-fls-finish="" class="button">Оплатить</button>
+					</div>
+				</div>
+			</main>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,71 @@
+@font-face { 
+	font-family: "iconfont"; 
+	font-display: swap;
+	src: url("/Users/sell/Main/nomi-delivery/src/assets/svgicons/preview/iconfont.woff2?062ef84ba0e1335b3837f45cdd1e5ac5") format("woff2"); 
+} 
+[class*="--icon-"]::before{
+	font-family: iconfont; 
+}
+	[class*="--icon-weight"]::before { 
+		content: "\f101"; 
+	} 
+	[class*="--icon-trash"]::before { 
+		content: "\f102"; 
+	} 
+	[class*="--icon-time"]::before { 
+		content: "\f103"; 
+	} 
+	[class*="--icon-reserve"]::before { 
+		content: "\f104"; 
+	} 
+	[class*="--icon-price"]::before { 
+		content: "\f105"; 
+	} 
+	[class*="--icon-plus"]::before { 
+		content: "\f106"; 
+	} 
+	[class*="--icon-people"]::before { 
+		content: "\f107"; 
+	} 
+	[class*="--icon-minus"]::before { 
+		content: "\f108"; 
+	} 
+	[class*="--icon-logo"]::before { 
+		content: "\f109"; 
+	} 
+	[class*="--icon-location"]::before { 
+		content: "\f10a"; 
+	} 
+	[class*="--icon-info"]::before { 
+		content: "\f10b"; 
+	} 
+	[class*="--icon-fail"]::before { 
+		content: "\f10c"; 
+	} 
+	[class*="--icon-empty-box"]::before { 
+		content: "\f10d"; 
+	} 
+	[class*="--icon-emoji"]::before { 
+		content: "\f10e"; 
+	} 
+	[class*="--icon-check"]::before { 
+		content: "\f10f"; 
+	} 
+	[class*="--icon-chat"]::before { 
+		content: "\f110"; 
+	} 
+	[class*="--icon-cancel"]::before { 
+		content: "\f111"; 
+	} 
+	[class*="--icon-calendar"]::before { 
+		content: "\f112"; 
+	} 
+	[class*="--icon-bookmark"]::before { 
+		content: "\f113"; 
+	} 
+	[class*="--icon-attach"]::before { 
+		content: "\f114"; 
+	} 
+	[class*="--icon-arrow"]::before { 
+		content: "\f115"; 
+	} 

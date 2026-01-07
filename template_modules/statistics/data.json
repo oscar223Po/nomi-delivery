@@ -1,0 +1,351 @@
+{
+  "statistics": {
+    "sessions": [
+      {
+        "date": "12.12.2025",
+        "start": 1765555460645,
+        "end": 1765555873834
+      },
+      {
+        "date": "12.12.2025",
+        "start": 1765558810712,
+        "end": 1765560616249
+      },
+      {
+        "date": "13.12.2025",
+        "start": 1765603826887,
+        "end": 1765608344288
+      },
+      {
+        "date": "13.12.2025",
+        "start": 1765608349215,
+        "end": 1765608812538
+      },
+      {
+        "date": "13.12.2025",
+        "start": 1765612252976,
+        "end": 1765612656663
+      },
+      {
+        "date": "13.12.2025",
+        "start": 1765612689446,
+        "end": 1765619569166
+      },
+      {
+        "date": "13.12.2025",
+        "start": 1765623858250,
+        "end": 1765624420848
+      },
+      {
+        "date": "13.12.2025",
+        "start": 1765624492716,
+        "end": 1765633920001,
+        "type": "build"
+      },
+      {
+        "date": "15.12.2025",
+        "start": 1765786154246,
+        "end": 1765789646897
+      },
+      {
+        "date": "15.12.2025",
+        "start": 1765789651339,
+        "end": 1765792110415,
+        "type": "build"
+      },
+      {
+        "date": "15.12.2025",
+        "start": 1765792160456,
+        "end": 1765799090078,
+        "type": "build"
+      },
+      {
+        "date": "15.12.2025",
+        "start": 1765811711923,
+        "end": 1765816535376,
+        "type": "build"
+      },
+      {
+        "date": "16.12.2025",
+        "start": 1765860293940,
+        "end": 1765867407881,
+        "type": "build"
+      },
+      {
+        "date": "16.12.2025",
+        "start": 1765872979101,
+        "end": 1765885421423
+      },
+      {
+        "date": "16.12.2025",
+        "start": 1765887411856,
+        "end": 1765889309680
+      },
+      {
+        "date": "16.12.2025",
+        "start": 1765889316573,
+        "end": 1765889787853,
+        "type": "build"
+      },
+      {
+        "date": "16.12.2025",
+        "start": 1765890048495,
+        "end": 1765891417348,
+        "type": "build"
+      },
+      {
+        "date": "16.12.2025",
+        "start": 1765901247593,
+        "end": 1765906096042,
+        "type": "build"
+      },
+      {
+        "date": "16.12.2025",
+        "start": 1765906203311,
+        "end": 1765906255288,
+        "type": "build"
+      },
+      {
+        "date": "17.12.2025",
+        "start": 1765945261156,
+        "end": 1765951626969,
+        "type": "build"
+      },
+      {
+        "date": "17.12.2025",
+        "start": 1765955974716,
+        "end": 1765961314476
+      },
+      {
+        "date": "17.12.2025",
+        "start": 1765962731945,
+        "end": 1765969694183,
+        "type": "build"
+      },
+      {
+        "date": "17.12.2025",
+        "start": 1765984603264,
+        "end": 1765994368075,
+        "type": "build"
+      },
+      {
+        "date": "18.12.2025",
+        "start": 1765994488015,
+        "end": 1765994876233
+      },
+      {
+        "date": "18.12.2025",
+        "start": 1765994919345,
+        "end": 1765996045248,
+        "type": "build"
+      },
+      {
+        "date": "18.12.2025",
+        "start": 1766032608829,
+        "end": 1766037144888,
+        "type": "build"
+      },
+      {
+        "date": "18.12.2025",
+        "start": 1766037977919,
+        "end": 1766039656142,
+        "type": "build"
+      },
+      {
+        "date": "18.12.2025",
+        "start": 1766054835481,
+        "end": 1766056153937
+      },
+      {
+        "date": "18.12.2025",
+        "start": 1766056204352,
+        "end": 1766056823668
+      },
+      {
+        "date": "18.12.2025",
+        "start": 1766056828852,
+        "end": 1766060621309,
+        "type": "build"
+      },
+      {
+        "date": "19.12.2025",
+        "start": 1766124833490,
+        "end": 1766129886340
+      },
+      {
+        "date": "19.12.2025",
+        "start": 1766132791487,
+        "end": 1766140065205,
+        "type": "build"
+      },
+      {
+        "date": "22.12.2025",
+        "start": 1766419462945,
+        "end": 1766419884778
+      },
+      {
+        "date": "22.12.2025",
+        "start": 1766420347762,
+        "end": 1766424863851
+      },
+      {
+        "date": "23.12.2025",
+        "start": 1766427995751,
+        "end": 1766428886309,
+        "type": "build"
+      },
+      {
+        "date": "23.12.2025",
+        "start": 1766463670338,
+        "end": 1766464143649,
+        "type": "build"
+      },
+      {
+        "date": "23.12.2025",
+        "start": 1766464832090,
+        "end": 1766464943402,
+        "type": "build"
+      },
+      {
+        "date": "25.12.2025",
+        "start": 1766682055293,
+        "end": 1766682704309,
+        "type": "build"
+      },
+      {
+        "date": "07.01.2026",
+        "start": 1767802473380,
+        "end": 1767802550329
+      },
+      {
+        "date": "07.01.2026",
+        "start": 1767802567520,
+        "end": 1767804351982,
+        "type": "build"
+      }
+    ],
+    "files": [
+      "style.scss",
+      "home.scss",
+      "home.html",
+      "settings.scss",
+      ".DS_Store",
+      "decore.svg",
+      "home.js",
+      "tabs.html",
+      "tabs.scss",
+      "portion.html",
+      "_components.html",
+      "button.html",
+      "portion.scss",
+      "index.html",
+      "portions.html",
+      "quantity.scss",
+      "quantity.js",
+      "menu.scss",
+      "menu.html",
+      "menu.json",
+      "header.html",
+      "header.scss",
+      "iconfont.svg",
+      "iconfont.html",
+      "iconfont.ttf",
+      "iconfont.woff2",
+      "blank.html",
+      "blank.scss",
+      "preview.html",
+      "preview.scss",
+      "scroll.scss",
+      "menu.js",
+      "button.scss",
+      "aster.svg",
+      "menuScreens.js",
+      "panels.js",
+      "panels.html",
+      "panels.scss",
+      "input.scss",
+      "select.scss",
+      "spollers.scss",
+      "chat.scss",
+      "chat.html",
+      "chat.js",
+      "data.html",
+      "data.scss",
+      "data.js",
+      "info.js",
+      "info.html",
+      "info.scss",
+      "choose.html",
+      "choose.js",
+      "choose.scss",
+      "delivery.js",
+      "delivery.scss",
+      "delivery.html",
+      "book.html",
+      "book.js",
+      "book.scss",
+      "control.html",
+      "control.js",
+      "control.scss",
+      "controls.html",
+      "controls.js",
+      "controls.scss",
+      "stamp.html",
+      "stamps.html",
+      "stamps.scss",
+      "stamps.js",
+      "calendar.html",
+      "calendar.js",
+      "yearbook.html",
+      "yearbook.js",
+      "temp.html",
+      "state-time.html",
+      "state.scss",
+      "state-success.html",
+      "state-fail.html",
+      "state-active.html",
+      "projectpage.html",
+      "dish.html",
+      "dish.js",
+      "dish.scss",
+      "Image.jpg",
+      "preview-dish.html",
+      "radio.scss",
+      "checkbox.scss",
+      "gain.js",
+      "gain.html",
+      "gain.scss",
+      "cart.html",
+      "cart.js",
+      "cart.scss",
+      "total.html",
+      "total.js",
+      "total.scss",
+      "issue.html",
+      "total-issue.html",
+      "issue.scss",
+      "issue.js",
+      "weight.svg",
+      "reserve.svg",
+      "trash.svg",
+      "people.svg",
+      "time.svg",
+      "minus.svg",
+      "price.svg",
+      "info.svg",
+      "location.svg",
+      "fail.svg",
+      "logo.svg",
+      "empty-box.svg",
+      "emoji.svg",
+      "chat.svg",
+      "cancel.svg",
+      "plus.svg",
+      "check.svg",
+      "bookmark.svg",
+      "attach.svg",
+      "arrow.svg",
+      "calendar.svg"
+    ]
+  }
+}

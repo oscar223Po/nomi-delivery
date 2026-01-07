@@ -1,0 +1,109 @@
+<script type="module" src="@components/pages/cart/cart.js"></script>
+<link rel="stylesheet" href="@components/pages/cart/cart.scss">
+
+<main class="page page--cart">
+	<section class="page__cart cart">
+		<div class="cart__container">
+			<div class="cart__head">
+				<button type="button" data-fls-button class="cart__close cart__close--icon-arrow button-box"></button>
+				<h2 class="cart__title cart__title--title">
+					<span>Корзина</span>
+					<button type="button" class="cart__mark cart__mark--icon-bookmark"></button>
+				</h2>
+			</div>
+			<div class="cart__items">
+				<div class="cart__item item-cart">
+					<div class="item-cart__main">
+						<div class="item-cart__content">
+							<img src="@img/portion/01.jpg" alt="Image">
+							<div class="item-cart__info">
+								<div class="item-cart__main-info">
+									<span>Название блюда</span>
+									<span>000 г.</span>
+								</div>
+								<div class="item-cart__below-info">
+									<span>Medium,</span>
+									<span>Из мраморной говядины,</span>
+									<span>Соевый соус,</span>
+									<span>Палочки</span>
+								</div>
+							</div>
+						</div>
+						<button type="button" class="item-cart__action item-cart__action--icon-trash"></button>
+					</div>
+					<div class="item-cart__below">
+						<div data-fls-quantity class="item-cart__quantity quantity">
+							<button data-fls-quantity-minus type="button" class="quantity__button quantity__button--minus"></button>
+							<div class="quantity__input">
+								<input data-fls-quantity-value autocomplete="off" type="text" name="form[]" value="1">
+							</div>
+							<button data-fls-quantity-plus type="button" class="quantity__button quantity__button--plus"></button>
+						</div>
+						<span>0 000 ₽</span>
+					</div>
+				</div>
+				<div class="cart__item item-cart">
+					<div class="item-cart__main">
+						<div class="item-cart__content">
+							<img src="@img/portion/01.jpg" alt="Image">
+							<div class="item-cart__info">
+								<div class="item-cart__main-info">
+									<span>Название блюда</span>
+									<span>000 г.</span>
+								</div>
+								<div class="item-cart__below-info">
+									<span>Medium,</span>
+									<span>Из мраморной говядины,</span>
+									<span>Соевый соус,</span>
+									<span>Палочки</span>
+								</div>
+							</div>
+						</div>
+						<button type="button" class="item-cart__action item-cart__action--icon-trash"></button>
+					</div>
+					<div class="item-cart__below">
+						<div data-fls-quantity class="item-cart__quantity quantity">
+							<button data-fls-quantity-minus type="button" class="quantity__button quantity__button--minus"></button>
+							<div class="quantity__input">
+								<input data-fls-quantity-value autocomplete="off" type="text" name="form[]" value="1">
+							</div>
+							<button data-fls-quantity-plus type="button" class="quantity__button quantity__button--plus"></button>
+						</div>
+						<span>0 000 ₽</span>
+					</div>
+				</div>
+				<div class="cart__item item-cart">
+					<div class="item-cart__main">
+						<div class="item-cart__content">
+							<img src="@img/portion/01.jpg" alt="Image">
+							<div class="item-cart__info">
+								<div class="item-cart__main-info">
+									<span>Название блюда</span>
+									<span>000 г.</span>
+								</div>
+								<div class="item-cart__below-info">
+									<span>Medium,</span>
+									<span>Из мраморной говядины,</span>
+									<span>Соевый соус,</span>
+									<span>Палочки</span>
+								</div>
+							</div>
+						</div>
+						<button type="button" class="item-cart__action item-cart__action--icon-trash"></button>
+					</div>
+					<div class="item-cart__below">
+						<div data-fls-quantity class="item-cart__quantity quantity">
+							<button data-fls-quantity-minus type="button" class="quantity__button quantity__button--minus"></button>
+							<div class="quantity__input">
+								<input data-fls-quantity-value autocomplete="off" type="text" name="form[]" value="1">
+							</div>
+							<button data-fls-quantity-plus type="button" class="quantity__button quantity__button--plus"></button>
+						</div>
+						<span>0 000 ₽</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<include src="@components/layout/total/total-cart.html"></include>
+</main>
